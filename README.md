@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-##Mandatory part  
+## Mandatory part  
 You need  
 • North  
 • East  
@@ -42,21 +42,21 @@ necessary experience to level up will follow this pattern:
 • Level 4 - 8050 XP  
 • Level 5 - 12200 XP
   
-##V.2 Features  
+## V.2 Features  
 The game can be launched in 2 modes as described below.  
 $java -jar swingy.jar console  
 $java -jar swingy.jar gui  
 A user’s heroes and their state will be preserved, when the user exits the game, in a
 text file. When starting the game, your program will load the heroes from this file.    
 
-##V.3 Validation  
+## V.3 Validation  
 You will need to integrate a third party library in your project in order to provide annotation
 based validation. We highly recommend that you use a library that implements
 the javax.validation specification.
 You will not allow any abnormal user input to disrupt the game behaviour. Validation
 failure will be highlighted to the user.  
 
-##V.4 Bonus part
+## V.4 Bonus part
 Bonus points will be given if:  
 • You persist the user’s heroes in a relational database, instead of a text file.  
 • You can switch between console view and GUI view at runtime, without closing the
