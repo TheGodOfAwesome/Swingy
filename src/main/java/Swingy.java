@@ -1,10 +1,4 @@
-package main.java;
-
-import main.java.Controller.GameController;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import Controller.GameController;
 
 public class Swingy {
 

@@ -1,6 +1,6 @@
-package main.java.Controller;
+package Controller;
 
-import main.java.View.GameForm;
+import View.GameForm;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
