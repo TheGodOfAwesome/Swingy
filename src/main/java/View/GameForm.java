@@ -6,8 +6,10 @@ import java.awt.*;
 public class GameForm extends JFrame{
 
     private JPanel panel;
-    private JButton button1;
-    private JButton button2;
+    private JButton buttonNorth;
+    private JButton buttonSouth;
+    private JButton buttonWest;
+    private JButton buttonEast;
     private JTextArea textArea1;
 
     public GameForm(int width, int height){
@@ -18,12 +20,20 @@ public class GameForm extends JFrame{
         setLocationRelativeTo(null);
     }
 
-    public JButton getButton1(){
-        return button1;
+    public JButton getButtonNorth(){
+        return buttonNorth;
     }
 
-    public JButton getButton2(){
-        return button2;
+    public JButton getButtonSouth(){
+        return buttonSouth;
+    }
+
+    public JButton getButtonWest(){
+        return buttonWest;
+    }
+
+    public JButton getButtonEast(){
+        return buttonEast;
     }
 
     public JTextArea getGameTextArea(){

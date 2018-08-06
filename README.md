@@ -1,15 +1,15 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    README.md                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: kmuvezwa <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/08/02 13:20:36 by kmuvezwa          #+#    #+#              #
-#    Updated: 2018/08/02 13:25:41 by kmuvezwa         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+# Swingy  
 
+A minimalistic text-based and GUI RPG game applying the best
+practices suited for this problem. 
+
+• First phase for hardcore hipsters will be console based  
+• Second phase for regular hipsters, will also have a simple GUI for taking user
+input.  
+• Model-View-Controller design pattern.  
+• Automated build with Maven.  
+• Annotation based user input validation.  
+Clean design, that is easy to read, understand and change in case the requirements are modified. 
 
 ## Mandatory part  
 You need  
@@ -35,7 +35,8 @@ reaches the next level experience.
 that an artefact will be droped and the quality of the artefact also varies
 depending on the villain’s strenght.  
 Leveling up is based on the following formula level*1000+(level − 1)2*450. So the
-necessary experience to level up will follow this pattern:  
+necessary experience to level up will follow this pattern:
+  
 • Level 1 - 1000 XP  
 • Level 2 - 2450 XP  
 • Level 3 - 4800 XP  
