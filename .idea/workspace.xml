@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c904d1cc-3122-4965-bde3-9753df28f7de" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swingy1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/swingy2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ConsoleGameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/GameActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GuiGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Swingy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Swingy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/GameForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GameForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/GameForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GameForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/GameController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/GameController$getTestButton1Click.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/GameController$getTestButton2Click.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/GameController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Swingy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Swingy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/View/GameForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameForm.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Swingy.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Swingy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Swingy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="332">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,12 +28,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="151">
-                <caret line="38" selection-start-line="38" selection-end-line="38" />
+              <first_editor relative-caret-position="734">
+                <caret line="49" column="61" lean-forward="true" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
               </first_editor>
               <second_editor />
             </state>
@@ -175,6 +157,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -185,8 +168,8 @@
         <option value="$PROJECT_DIR$/src/main/java/View/GameForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/GuiGameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/GameForm.form" />
-        <option value="$PROJECT_DIR$/src/main/java/Swingy.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/Swingy.java" />
       </list>
     </option>
   </component>
@@ -363,12 +346,20 @@
       <option name="presentableId" value="Default" />
       <updated>1533208161212</updated>
       <workItem from="1533208169089" duration="3358000" />
-      <workItem from="1533540680057" duration="15192000" />
+      <workItem from="1533540680057" duration="15918000" />
     </task>
+    <task id="LOCAL-00001" summary="Working gui and cli">
+      <created>1533565790252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533565790252</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18550000" />
+    <option name="totallyTimeSpent" value="19276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1920" height="976" extended-state="0" />
@@ -380,15 +371,15 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.32815966" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32815966" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32815966" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32815966" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" visible="true" weight="0.32815966" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21302083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21302083" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -409,6 +400,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working gui and cli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working gui and cli" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -463,23 +458,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/ConsoleGameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Swingy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -553,13 +531,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/ConsoleGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="151">
-            <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <first_editor relative-caret-position="734">
+            <caret line="49" column="61" lean-forward="true" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Swingy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -33,7 +33,7 @@ If a hero wins a battle, he gains:
 reaches the next level experience.  
 • An artifact, which he can keep or leave. Of course, winning a battle doesn’t guarantee
 that an artefact will be droped and the quality of the artefact also varies
-depending on the villain’s strenght.  
+depending on the villain’s strength.  
 Leveling up is based on the following formula level*1000+(level − 1)2*450. So the
 necessary experience to level up will follow this pattern:
   

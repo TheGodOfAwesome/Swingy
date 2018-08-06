@@ -15,7 +15,13 @@ public class Swingy {
                 guiGameController.showGameWindow();
             } else if (args[0].equalsIgnoreCase("Console")) {
                 System.out.println("Welcome to Lair's & Lizards\n");
-                String help  = "To traverse the environment type\n 'North'/'N' to go up\n 'South'/'S' to go down\n 'West'/'W' to go left\n 'East'/'E' to go right\n 'Exit'/'X' to quit game\n";
+                String help  =  "To traverse the environment type\n " +
+                                "'North'/'N' to go up\n " +
+                                "'South'/'S' to go down\n " +
+                                "'West'/'W' to go left\n " +
+                                "'East'/'E' to go right\n " +
+                                "'Exit'/'X' to quit game\n";
+
                 System.out.println("You are in the centre of a Lair\n");
                 System.out.println(help);
                 System.out.println("Begin...\n");
