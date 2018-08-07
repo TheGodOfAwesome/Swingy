@@ -6,16 +6,17 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GuiGameController {
+public class GameGuiController {
 
     private GameForm gameForm;
     private JButton buttonNorth;
     private JButton buttonSouth;
     private JButton buttonWest;
     private JButton buttonEast;
+    private JButton backButton;
     private JTextArea gameTextArea;
 
-    public GuiGameController(int width, int height){
+    public GameGuiController(int width, int height){
         initComponents(width, height);
         initListeners();
     }
@@ -32,17 +33,19 @@ public class GuiGameController {
         buttonSouth = gameForm.getButtonSouth();
         buttonWest = gameForm.getButtonWest();
         buttonEast = gameForm.getButtonEast();
+        backButton = gameForm.getBackButton();
         gameTextArea = gameForm.getGameTextArea();
     }
 
     private void initListeners(){
-        buttonNorth.addActionListener(new getTestButtonNorthClick());
-        buttonSouth.addActionListener(new getTestButtonSouthClick());
-        buttonWest.addActionListener(new getTestButtonWestClick());
-        buttonEast.addActionListener(new getTestButtonEastClick());
+        buttonNorth.addActionListener(new getButtonNorthClick());
+        buttonSouth.addActionListener(new getButtonSouthClick());
+        buttonWest.addActionListener(new getButtonWestClick());
+        buttonEast.addActionListener(new getButtonEastClick());
+        backButton.addActionListener(new getBackButtonClick());
     }
 
-    private class getTestButtonNorthClick implements ActionListener
+    private class getButtonNorthClick implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
             String message = "North!";
@@ -51,7 +54,7 @@ public class GuiGameController {
         }
     }
 
-    private class getTestButtonSouthClick implements ActionListener
+    private class getButtonSouthClick implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
             String message = "South!";
@@ -60,7 +63,7 @@ public class GuiGameController {
         }
     }
 
-    private class getTestButtonWestClick implements ActionListener
+    private class getButtonWestClick implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
             String message = "West!";
@@ -69,12 +72,20 @@ public class GuiGameController {
         }
     }
 
-    private class getTestButtonEastClick implements ActionListener
+    private class getButtonEastClick implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
             String message = "East!";
             JOptionPane.showMessageDialog(null, message);
             gameTextArea.append(message + "\n");
+        }
+    }
+
+    private class getBackButtonClick implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            gameForm.dispose();
+            OptionsGuiController optionsGuiController = new OptionsGuiController();
+            optionsGuiController.showOptionsWindow();
         }
     }
 }

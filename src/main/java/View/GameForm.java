@@ -11,6 +11,7 @@ public class GameForm extends JFrame{
     private JButton buttonWest;
     private JButton buttonEast;
     private JTextArea textArea1;
+    private JButton backButton;
 
     public GameForm(int width, int height){
         panel.setPreferredSize(new Dimension(width, height));
@@ -18,6 +19,10 @@ public class GameForm extends JFrame{
         panel.repaint();
         setContentPane(panel);
         setLocationRelativeTo(null);
+    }
+
+    public JButton getBackButton(){
+        return backButton;
     }
 
     public JButton getButtonNorth(){

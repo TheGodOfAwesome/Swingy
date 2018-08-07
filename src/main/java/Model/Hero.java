@@ -1,14 +1,6 @@
 package Model;
 
 public class Hero {
-    /*Hero name
-    • Hero class
-    • Level
-    • Experience
-    • Attack
-    • Defense
-    • Hit Points
-    */
     public String   HeroName;
     public String   HeroClass;
     public int      HeroAtt;

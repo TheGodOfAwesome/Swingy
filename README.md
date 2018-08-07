@@ -11,6 +11,46 @@ input.
 • Annotation based user input validation.  
 Clean design, that is easy to read, understand and change in case the requirements are modified. 
 
+## Compile
+To compile in cmd  
+* Run:  
+   -> mvn clean package 
+
+From the src directory   
+
+## References
+
+### [Oracle's Java SE 7 Documentation](https://docs.oracle.com/javase/7/docs/api/)  
+e.g. https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html
+
+### [Oracle's Java SE 7 Tutorials](https://docs.oracle.com/javase/tutorial/essential/)  
+e.g. https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html
+
+### [A pretty good programming resource](http://www.java2s.com/)
+e.g. http://www.java2s.com/Code/JavaAPI/java.io/BufferedInputStream.htm
+
+### [Intellij's Swing Gui Documetation](https://www.jetbrains.com/help/idea/creating-form-initialization-code.html)
+e.g. https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
+
+
+
+### Links  
+*   https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html  
+*   https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html  
+*   https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html  
+*   http://www.java2s.com/Code/JavaAPI/java.util/foreachloopforArrayList.htm  
+*   https://www.geeksforgeeks.org/arrays-in-java/  
+*   https://www.tutorialspoint.com/java/java_strings.htm  
+*   https://www.tutorialspoint.com/java/java_inheritance.htm  
+*   https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html
+*   https://en.wikipedia.org/wiki/Class_diagram  
+*   https://www.youtube.com/watch?v=wiQdrH2YpT4 Observer Design Pattern  
+*   https://www.youtube.com/watch?v=ohL2HIBK1pg Observer Design Pattern  
+*   https://www.youtube.com/watch?v=ub0DXaeV6hA&t=4s Factory Design Pattern  
+*   https://www.youtube.com/watch?v=xbjAsdAK4xQ Abstract Factory Design Pattern  
+*   https://www.jetbrains.com/help/idea/creating-form-initialization-code.html  
+
+
 ## Mandatory part  
 You need  
 • North  

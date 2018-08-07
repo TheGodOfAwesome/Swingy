@@ -1,14 +1,6 @@
 package Model;
 
 public class Enemy {
-    /*Enemy name
-    • Enemy class
-    • Level
-    • Experience
-    • Attack
-    • Defense
-    • Hit Points
-    */
     public String   EnemyName;
     public String   EnemyClass;
     public int      EnemyAtt;
