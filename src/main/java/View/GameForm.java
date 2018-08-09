@@ -12,6 +12,8 @@ public class GameForm extends JFrame{
     private JButton buttonEast;
     private JTextArea textArea1;
     private JButton backButton;
+    private JLabel labelHero;
+    private JLabel labelEnemy;
 
     public GameForm(int width, int height){
         panel.setPreferredSize(new Dimension(width, height));
@@ -20,6 +22,10 @@ public class GameForm extends JFrame{
         setContentPane(panel);
         setLocationRelativeTo(null);
     }
+
+    public JLabel getLabelHero(){ return labelHero; }
+
+    public JLabel getLabelEnemy(){ return labelEnemy; }
 
     public JButton getBackButton(){
         return backButton;

@@ -15,6 +15,8 @@ public class GameGuiController {
     private JButton buttonEast;
     private JButton backButton;
     private JTextArea gameTextArea;
+    private JLabel labelHero;
+    private JLabel labelEnemy;
 
     public GameGuiController(int width, int height){
         initComponents(width, height);
@@ -35,6 +37,8 @@ public class GameGuiController {
         buttonEast = gameForm.getButtonEast();
         backButton = gameForm.getBackButton();
         gameTextArea = gameForm.getGameTextArea();
+        labelHero = gameForm.getLabelHero();
+        labelEnemy = gameForm.getLabelEnemy();
     }
 
     private void initListeners(){
@@ -51,6 +55,8 @@ public class GameGuiController {
             String message = "North!";
             JOptionPane.showMessageDialog(null, message);
             gameTextArea.append(message + "\n");
+            labelHero.setText("North \nNorth \nNorth \nNorth");
+            labelEnemy.setText("North \nNorth \nNorth \nNorth");
         }
     }
 
@@ -60,6 +66,8 @@ public class GameGuiController {
             String message = "South!";
             JOptionPane.showMessageDialog(null, message);
             gameTextArea.append(message + "\n");
+            labelHero.setText("South \nSouth \nSouth \nSouth");
+            labelEnemy.setText("South \nSouth \nSouth \nSouth");
         }
     }
 
@@ -69,6 +77,8 @@ public class GameGuiController {
             String message = "West!";
             JOptionPane.showMessageDialog(null, message);
             gameTextArea.append(message + "\n");
+            labelHero.setText("<html>West<br/>West<br/>West<br/>West<html>");
+            labelEnemy.setText("<html>West<br/>West<br/>West<br/>West<html>");
         }
     }
 
@@ -78,6 +88,8 @@ public class GameGuiController {
             String message = "East!";
             JOptionPane.showMessageDialog(null, message);
             gameTextArea.append(message + "\n");
+            labelHero.setText("East \nEast \nEast \nEast");
+            labelEnemy.setText("East \nEast \nEast \nEast");
         }
     }
 
