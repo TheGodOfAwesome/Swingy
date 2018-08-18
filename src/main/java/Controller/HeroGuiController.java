@@ -1,10 +1,12 @@
 package Controller;
 
+import Model.Hero;
 import View.HeroForm;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class HeroGuiController {
 
@@ -41,6 +43,12 @@ public class HeroGuiController {
         nameTextField = heroForm.getNameTextField();
         heroStatsTextField = heroForm.getHeroStatsTextField();
         heroesComboBox = heroForm.getHeroesComboBox();
+
+        List<Hero> heroes = DatabaseController.selectAll();
+        for (Hero hero : heroes) {
+            heroesComboBox.addItem(hero.HeroName);
+        }
+
     }
 
     private void initListeners(){
@@ -53,7 +61,7 @@ public class HeroGuiController {
 
     private class getCreateButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            String name = (heroesComboBox.getSelectedItem().toString() == "Heroes")
+            String name = (heroesComboBox.getSelectedItem().toString() != "")
                     ?  heroesComboBox.getSelectedItem().toString() : nameTextField.getText();
             JOptionPane.showMessageDialog(null, name);
         }
@@ -70,18 +78,44 @@ public class HeroGuiController {
     private class getSamuraiRadioButtonSelect implements ActionListener {
         String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
         public void actionPerformed(ActionEvent e) {
-            String message = "Samurai!";
-            clearRadioButtons(message);
-            if(samuraiRadioButton.isSelected()){
-                heroStatsTextField.setText("Samurai Stats\n " +
-                        "   • " + name + "\n" +
-                        "   • 1     Level\n" +
-                        "   • 0     Experience\n" +
-                        "   • 10    Attack\n" +
-                        "   • 5     Defense\n" +
-                        "   • 50    Hit Points");
-                heroStatsTextField.revalidate();
-                JOptionPane.showMessageDialog(null, message);
+            if (nameTextField.getText().length() == 0) {
+                String message = "Samurai!";
+                clearRadioButtons(message);
+                heroStatsTextField.setText("");
+                if (samuraiRadioButton.isSelected()) samuraiRadioButton.doClick();
+                JOptionPane.showMessageDialog(null, "Please Enter A Unique Name For Your Hero!");
+            }
+            else {
+                String message = "Samurai!";
+                clearRadioButtons(message);
+                Hero hero = new Hero();
+                hero.HeroName = nameTextField.getText();
+                hero.HeroClass = "Samurai";
+                hero.HeroHp = 100;
+                hero.HeroAtt = 10;
+                hero.HeroDef = 20;
+                hero.HeroLvl = 0;
+                hero.HeroXp = 0;
+                if (samuraiRadioButton.isSelected()) {
+                    heroStatsTextField.setText(nameTextField.getText() + "\n" +
+                            "Samurai Stats\n " +
+                            "   • 0         Level\n" +
+                            "   • 0         Experience\n" +
+                            "   • 10        Attack\n" +
+                            "   • 20        Defense\n" +
+                            "   • 100       Hit Points");
+                    heroStatsTextField.revalidate();
+                    JOptionPane.showMessageDialog(null, message);
+                }
+                /*System.out.println(
+                        nameTextField.getText() + "\n" +
+                                "Samurai Stats\n " +
+                                "   • " + hero.HeroLvl + "  Level\n" +
+                                "   • " + hero.HeroXp + "   Experience\n" +
+                                "   • " + hero.HeroAtt + "  Attack\n" +
+                                "   • " + hero.HeroDef + "  Defense\n" +
+                                "   • " + hero.HeroHp + "    Hit Points"
+                );*/
             }
         }
     }

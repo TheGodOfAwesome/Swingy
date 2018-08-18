@@ -52,6 +52,7 @@ public class OptionsGuiController {
         public void actionPerformed(ActionEvent e) {
             HeroGuiController heroGuiController = new HeroGuiController();
             heroGuiController.showHeroWindow();
+            //OptionsForm.dispose();
         }
     }
 

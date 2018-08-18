@@ -3,30 +3,52 @@ package Controller;
 import Model.Hero;
 
 import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class DatabaseController
-{
+public class DatabaseController {
 
-    private static Connection connect() {
-        Connection conn = null;
+    public static void createNewDatabase() {
+
+        String url = "jdbc:sqlite:Swingy.db";
+
         try {
-            // db parameters
-            String url = "jdbc:sqlite:./sqlite.db";
-            // create a connection to the database
-            conn = DriverManager.getConnection(url);
-            //System.out.println("Connection to database has been established.");
+            Connection conn = DriverManager.getConnection(url);
+            if (conn != null) {
+                DatabaseMetaData meta = conn.getMetaData();
+                System.out.println("The driver name is " + meta.getDriverName());
+                System.out.println("A new database has been created.");
+            }
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    private static Connection connect() {
+        Connection conn = null;
+        try {
+            Class.forName("org.sqlite.JDBC");
+            // db parameters
+            String url = "jdbc:sqlite:Swingy.db";
+            // create a connection to the database
+            conn = DriverManager.getConnection(url);
+            //System.out.println("Connection to SQLite has been established.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         return conn;
     }
 
-    public static void createNewTable() {
+    public static void createHeroTable() {
         // SQLite connection string
-        Connection conn = connect();
+        String url = "jdbc:sqlite:Swingy.db";
 
-        // SQL statement for creating a new table
         String sql = "Create Table If Not Exists Heros(\n" +
                 " hero_id integer PRIMARY KEY AUTOINCREMENT,\n" +
                 " hero_name text NOT NULL,\n" +
@@ -39,58 +61,157 @@ public class DatabaseController
                 ");";
 
         try {
-            // create a new table
+            Connection conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
+            // create a new table
             stmt.execute(sql);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public static void InsertHeroRecord(Hero hero) {
-        // SQLite connection string
-        Connection conn = connect();
-
-        // SQL statement for creating a new table
-        String sql = "INSERT INTO Heros ( hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp)" +
-                "VALUES( " + hero.getHeroName() + ",  " + hero.HeroClass + ", " + hero.HeroHp + ", " + hero.HeroAtt + ", " + hero.HeroDef + ", " + hero.HeroLvl + ", " + hero.HeroXp + ");";
-
-        try {
-            // create a new table
-            Statement stmt = conn.createStatement();
-            stmt.execute(sql);
-        } catch (SQLException e) {
-            System.out.println("Insert Hero Query Failed: " + e.getMessage());
+    public static boolean insertHero(Hero hero) {
+        if (!findDuplicateHero(hero.HeroName)) {
+            String sql = "INSERT INTO Heros (hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp)" +
+                    " VALUES (?, ?, ?, ?, ?, ?, ?);";
+            System.out.println(hero.HeroName + ", " + hero.HeroClass + ", " + hero.HeroHp + ", " + hero.HeroAtt + ", " + hero.HeroDef + ", " + hero.HeroLvl + ", " + hero.HeroXp);
+            try {
+                Connection conn = connect();
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, hero.HeroName);
+                pstmt.setString(2, hero.HeroClass);
+                pstmt.setInt(3, hero.HeroAtt);
+                pstmt.setInt(4, hero.HeroDef);
+                pstmt.setInt(5, hero.HeroHp);
+                pstmt.setInt(6, hero.HeroLvl);
+                pstmt.setInt(7, hero.HeroXp);
+                pstmt.executeUpdate();
+                return (true);
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
         }
+        return (false);
     }
 
-    public static Hero GetHeroFromTable(String heroName){
+    public static List<Hero> selectAll(){
+        String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
+        List<Hero> heroes = new ArrayList<Hero>();
         Hero hero = new Hero();
-
-        // SQLite connection string
-        Connection conn = connect();
-
-        // SQL statement for creating a new table
-        String sql = "Select * from Heros Where hero_name = " + heroName + ";";
-
         try {
-            // create a new table
-            Statement stmt = conn.createStatement();
-            //stmt.execute(sql);
+            Connection conn = connect();
+            Statement stmt  = conn.createStatement();
             ResultSet rs    = stmt.executeQuery(sql);
             // loop through the result set
             while (rs.next()) {
+                /*System.out.println(rs.getInt("hero_id") +  "\n" +
+                        rs.getString("hero_name") + "\n" +
+                        rs.getString("hero_class") + "\n" +
+                        rs.getInt("hero_att") + "\n" +
+                        rs.getInt("hero_def") + "\n" +
+                        rs.getInt("hero_hp") + "\n" +
+                        rs.getInt("hero_lvl") + "\n" +
+                        rs.getInt("hero_xp"));
+                        */
                 hero.HeroName = rs.getString("hero_name");
-                hero.HeroClass =  rs.getString("hero_class");
+                hero.HeroClass = rs.getString("hero_class");
                 hero.HeroAtt = rs.getInt("hero_att");
-                hero.HeroDef =  rs.getInt("hero_def");
+                hero.HeroDef = rs.getInt("hero_def");
                 hero.HeroHp = rs.getInt("hero_hp");
-                hero.HeroLvl =  rs.getInt("hero_lvl");
+                hero.HeroLvl = rs.getInt("hero_lvl");
                 hero.HeroXp = rs.getInt("hero_xp");
+                heroes.add(hero);
             }
         } catch (SQLException e) {
-            System.out.println("Select Hero Query Failed: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
-        return hero;
+        return (heroes);
+    }
+
+    public static Hero selectHero(String HeroName){
+        String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
+        Hero hero = new Hero();
+        try {
+            Connection conn = connect();
+            Statement stmt  = conn.createStatement();
+            ResultSet rs    = stmt.executeQuery(sql);
+            // loop through the result set
+            while (rs.next()) {
+                if (hero.HeroName == HeroName) {
+                    hero.HeroName = rs.getString("hero_name");
+                    hero.HeroClass = rs.getString("hero_class");
+                    hero.HeroAtt = rs.getInt("hero_att");
+                    hero.HeroDef = rs.getInt("hero_def");
+                    hero.HeroHp = rs.getInt("hero_hp");
+                    hero.HeroLvl = rs.getInt("hero_lvl");
+                    hero.HeroXp = rs.getInt("hero_xp");
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return (hero);
+    }
+
+    public static boolean findDuplicateHero(String HeroName){
+        String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
+        Hero hero = new Hero();
+        try {
+            Connection conn = connect();
+            Statement stmt  = conn.createStatement();
+            ResultSet rs    = stmt.executeQuery(sql);
+            // loop through the result set
+            while (rs.next()) {
+                if (hero.HeroName == HeroName)
+                    return (true);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return (false);
+    }
+
+    public static void updateHero(Hero hero) {
+        String sql = "UPDATE Heros SET"
+                + " hero_class = ? ,"
+                + " hero_att = ? ,"
+                + " hero_def = ? ,"
+                + " hero_hp = ? ,"
+                + " hero_lvl = ? ,"
+                + " hero_xp = ? "
+                + "WHERE hero_name = ?";
+
+        try {
+            Connection conn = connect();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            // set the corresponding param
+            pstmt.setString(1, hero.HeroClass);
+            pstmt.setInt(2, hero.HeroAtt);
+            pstmt.setInt(3, hero.HeroDef);
+            pstmt.setInt(4, hero.HeroHp);
+            pstmt.setInt(5, hero.HeroLvl);
+            pstmt.setInt(6, hero.HeroXp);
+            pstmt.setString(7, hero.HeroName);
+            // update
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void deleteHero(Hero hero) {
+        String sql = "DELETE FROM Heros WHERE hero_name = ?";
+
+        try {
+            Connection conn = connect();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            // set the corresponding param
+            pstmt.setString(1, hero.HeroName);
+            // execute the delete statement
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

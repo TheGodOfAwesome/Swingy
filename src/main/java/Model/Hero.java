@@ -8,6 +8,7 @@ public class Hero {
     public int      HeroHp;
     public int      HeroLvl;
     public int      HeroXp;
+    public int      HeroMapLvl;
 
     public String getHeroName() {
         return HeroName;
@@ -62,6 +63,7 @@ public class Hero {
         HeroLvl = Level;
         return HeroLvl;
     }
+
     public int getHeroXp() {
         return HeroXp;
     }
@@ -69,5 +71,14 @@ public class Hero {
     public int setHeroXp(int Experience) {
         HeroXp = Experience;
         return HeroXp;
+    }
+
+    public int getHeroMapLvl() {
+        return HeroLvl;
+    }
+
+    public int setHeroMapLvl(int Level) {
+        HeroLvl = Level;
+        return HeroLvl;
     }
 }

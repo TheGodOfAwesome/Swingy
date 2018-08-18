@@ -3,27 +3,19 @@ import Controller.*;
 import Model.Hero;
 import View.ConsoleView;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Swingy {
 
     public static void main(String [] args){
         if (args.length == 1) {
-            DbConnController.connect();
-            DatabaseController.createNewTable();
-            Hero hero = new Hero();
-            hero.HeroName = "Kuzi";
-            hero.HeroClass = "Knight";
-            hero.HeroHp = 100;
-            hero.HeroAtt = 10;
-            hero.HeroDef = 20;
-            hero.HeroHp = 30;
-            hero.HeroLvl = 40;
-            hero.HeroXp = 50;
-            DatabaseController.InsertHeroRecord(hero);
-            Hero newHero = DatabaseController.GetHeroFromTable("Kuzi");
-            System.out.println(newHero.HeroName + "\n" + newHero.HeroClass + "\n" + newHero.HeroHp
-                    + "\n" + newHero.HeroAtt + "\n" + newHero.HeroDef + "\n" + newHero.HeroLvl + "\n" + newHero.HeroXp + "\n");
+            DatabaseController.createNewDatabase();
+            DatabaseController.createHeroTable();
+            //DatabaseController.insertHero(hero);
+            //DatabaseController.deleteHero(hero);
+            List<Hero> heroes = DatabaseController.selectAll();
+            //DatabaseController.updateHero(hero);
             System.out.println("Game Started!");
             System.out.println(args[0] + "\n");
             if (args[0].equalsIgnoreCase("Gui")){
