@@ -1,14 +1,19 @@
 package Model;
 
+
+import com.sun.istack.internal.NotNull;
+
 public class Hero {
+
+    @NotNull
     public String   HeroName;
+
     public String   HeroClass;
     public int      HeroAtt;
     public int      HeroDef;
     public int      HeroHp;
     public int      HeroLvl;
     public int      HeroXp;
-    public int      HeroMapLvl;
 
     public String getHeroName() {
         return HeroName;

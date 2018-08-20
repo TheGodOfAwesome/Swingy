@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Hero;
 import View.OptionsForm;
 
 import javax.swing.*;
@@ -12,6 +13,7 @@ public class OptionsGuiController {
     private JButton     playButton;
     private JButton     createHeroButton;
     private JButton     switchButton;
+    private Hero        hero = new Hero();
 
     public OptionsGuiController() {
         initComponents();
@@ -42,8 +44,9 @@ public class OptionsGuiController {
         public void actionPerformed(ActionEvent e) {
             int screenWidth = 1080;
             int screenHeight = 1080;
-            GameGuiController gameGuiController = new GameGuiController(screenWidth, screenHeight);
+            GameGuiController gameGuiController = new GameGuiController(screenWidth, screenHeight, hero);
             gameGuiController.showGameWindow();
+            optionsForm.setVisible(false);
         }
     }
 
@@ -52,7 +55,7 @@ public class OptionsGuiController {
         public void actionPerformed(ActionEvent e) {
             HeroGuiController heroGuiController = new HeroGuiController();
             heroGuiController.showHeroWindow();
-            //OptionsForm.dispose();
+            optionsForm.setVisible(false);
         }
     }
 

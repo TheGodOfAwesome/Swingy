@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Hero;
 import View.GameForm;
 
 import javax.swing.*;
@@ -18,7 +19,15 @@ public class GameGuiController {
     private JLabel labelHero;
     private JLabel labelEnemy;
 
-    public GameGuiController(int width, int height){
+    public GameGuiController(int width, int height, Hero hero){
+        labelHero.setText("Hero:\n"
+                            + hero.HeroName + "\n"
+                            + hero.HeroClass + "\n"
+                            + hero.HeroLvl + "\n"
+                            + hero.HeroHp + "\n"
+                            + hero.HeroAtt + "\n"
+                            + hero.HeroDef + "\n"
+                            + hero.HeroXp + "\n" );
         initComponents(width, height);
         initListeners();
     }

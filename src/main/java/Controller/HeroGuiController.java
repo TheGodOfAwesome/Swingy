@@ -10,6 +10,7 @@ import java.util.List;
 
 public class HeroGuiController {
 
+    private Hero hero;
     private HeroForm heroForm;
     private JRadioButton samuraiRadioButton;
     private JRadioButton kunoichiRadioButton;
@@ -57,13 +58,33 @@ public class HeroGuiController {
         samuraiRadioButton.addActionListener(new getSamuraiRadioButtonSelect());
         kunoichiRadioButton.addActionListener(new getKunoichiRadioButtonSelect());
         archerRadioButton.addActionListener(new getArcherRadioButtonSelect());
+        heroesComboBox.addActionListener(new getHeroesComboBox());
     }
 
     private class getCreateButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            String name = (heroesComboBox.getSelectedItem().toString() != "")
-                    ?  heroesComboBox.getSelectedItem().toString() : nameTextField.getText();
-            JOptionPane.showMessageDialog(null, name);
+            if (heroesComboBox.getSelectedIndex() != 0) {
+                heroForm.dispose();
+                String heroName = (String) heroesComboBox.getSelectedItem();
+                JOptionPane.showMessageDialog(null, heroName);
+                hero = DatabaseController.selectHero(heroName);
+                JOptionPane.showMessageDialog(null, hero.HeroName);
+                /*if (hero != null) {
+                    GameGuiController gameGuiController = new GameGuiController(1000, 1000, hero);
+                    gameGuiController.showGameWindow();
+                }*/
+                //hero = DatabaseController.selectHero(heroesComboBox.getSelectedItem().toString());
+                //hero = (Hero) heroesComboBox.getSelectedItem();
+            } else if (archerRadioButton.isSelected() || kunoichiRadioButton.isSelected() || samuraiRadioButton.isSelected()) {
+                String name = (heroesComboBox.getSelectedIndex() == 0)
+                        ?  nameTextField.getText() : "name???";
+                JOptionPane.showMessageDialog(null, name);
+                heroForm.dispose();
+                GameGuiController gameGuiController = new GameGuiController(1000, 1000, hero);
+                gameGuiController.showGameWindow();
+            } else {
+                JOptionPane.showMessageDialog(null, "Please Give Your Hero A Name and Select A Hero Class.\n Or Select An Existing Hero!");
+            }
         }
     }
 
@@ -78,18 +99,18 @@ public class HeroGuiController {
     private class getSamuraiRadioButtonSelect implements ActionListener {
         String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
         public void actionPerformed(ActionEvent e) {
+            heroStatsTextField.setText("");
             if (nameTextField.getText().length() == 0) {
-                String message = "Samurai!";
-                clearRadioButtons(message);
                 heroStatsTextField.setText("");
-                if (samuraiRadioButton.isSelected()) samuraiRadioButton.doClick();
+                if (samuraiRadioButton.isSelected()) samuraiRadioButton.setSelected(false);
                 JOptionPane.showMessageDialog(null, "Please Enter A Unique Name For Your Hero!");
             }
             else {
                 String message = "Samurai!";
                 clearRadioButtons(message);
-                Hero hero = new Hero();
-                hero.HeroName = nameTextField.getText();
+
+                String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
+                hero.HeroName = name;
                 hero.HeroClass = "Samurai";
                 hero.HeroHp = 100;
                 hero.HeroAtt = 10;
@@ -107,15 +128,6 @@ public class HeroGuiController {
                     heroStatsTextField.revalidate();
                     JOptionPane.showMessageDialog(null, message);
                 }
-                /*System.out.println(
-                        nameTextField.getText() + "\n" +
-                                "Samurai Stats\n " +
-                                "   • " + hero.HeroLvl + "  Level\n" +
-                                "   • " + hero.HeroXp + "   Experience\n" +
-                                "   • " + hero.HeroAtt + "  Attack\n" +
-                                "   • " + hero.HeroDef + "  Defense\n" +
-                                "   • " + hero.HeroHp + "    Hit Points"
-                );*/
             }
         }
     }
@@ -123,51 +135,94 @@ public class HeroGuiController {
     private class getKunoichiRadioButtonSelect implements ActionListener {
         String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
         public void actionPerformed(ActionEvent e) {
-            String message = "Kunoichi!";
-            clearRadioButtons(message);
-            if(kunoichiRadioButton.isSelected()) {
-                heroStatsTextField.setText("Kunoichi Stats\n " +
-                        "   • " + name + "\n" +
-                        "   • 1     Level\n" +
-                        "   • 0     Experience\n" +
-                        "   • 10    Attack\n" +
-                        "   • 5     Defense\n" +
-                        "   • 50    Hit Points");
-                heroStatsTextField.revalidate();
-                JOptionPane.showMessageDialog(null, message);
+            heroStatsTextField.setText("");
+            if (nameTextField.getText().length() == 0) {
+                heroStatsTextField.setText("");
+                if (kunoichiRadioButton.isSelected()) kunoichiRadioButton.setSelected(false);
+                JOptionPane.showMessageDialog(null, "Please Enter A Unique Name For Your Hero!");
+            }
+            else {
+                String message = "Kunoichi!";
+                clearRadioButtons(message);
+                hero.HeroName = name;
+                hero.HeroClass = "Kunoichi";
+                hero.HeroHp = 100;
+                hero.HeroAtt = 10;
+                hero.HeroDef = 20;
+                hero.HeroLvl = 0;
+                hero.HeroXp = 0;
+                if (kunoichiRadioButton.isSelected()) {
+                    heroStatsTextField.setText(nameTextField.getText() + "\n" +
+                            "Kunoichi Stats\n " +
+                            "   • 0         Level\n" +
+                            "   • 0         Experience\n" +
+                            "   • 10        Attack\n" +
+                            "   • 20        Defense\n" +
+                            "   • 100       Hit Points");
+                    heroStatsTextField.revalidate();
+                    JOptionPane.showMessageDialog(null, message);
+                }
             }
         }
     }
 
     private class getArcherRadioButtonSelect implements ActionListener {
+        String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
         public void actionPerformed(ActionEvent e) {
-            String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
-            String message = "Archer!";
-            clearRadioButtons(message);
-            if(archerRadioButton.isSelected()) {
-                heroStatsTextField.setText("Archer Stats\n " +
-                        "   • " + name + "\n" +
-                        "   • 1     Level\n" +
-                        "   • 0     Experience\n" +
-                        "   • 10    Attack\n" +
-                        "   • 5     Defense\n" +
-                        "   • 50    Hit Points");
-                heroStatsTextField.revalidate();
-                JOptionPane.showMessageDialog(null, message);
+            heroStatsTextField.setText("");
+            if (nameTextField.getText().length() == 0) {
+                heroStatsTextField.setText("");
+                if (archerRadioButton.isSelected()) archerRadioButton.setSelected(false);
+                JOptionPane.showMessageDialog(null, "Please Enter A Unique Name For Your Hero!");
+            }
+            else {
+                String message = "Archer!";
+                clearRadioButtons(message);
+                hero.HeroName = name;
+                hero.HeroClass = "Archer";
+                hero.HeroHp = 100;
+                hero.HeroAtt = 10;
+                hero.HeroDef = 20;
+                hero.HeroLvl = 0;
+                hero.HeroXp = 0;
+                if (archerRadioButton.isSelected()) {
+                    heroStatsTextField.setText(nameTextField.getText() + "\n" +
+                            "Archer Stats\n " +
+                            "   • 0         Level\n" +
+                            "   • 0         Experience\n" +
+                            "   • 10        Attack\n" +
+                            "   • 20        Defense\n" +
+                            "   • 100       Hit Points");
+                    heroStatsTextField.revalidate();
+                    JOptionPane.showMessageDialog(null, message);
+                }
+            }
+        }
+    }
+
+    public class getHeroesComboBox implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            if (heroesComboBox.getSelectedIndex() > 0){
+                if (archerRadioButton.isSelected()) archerRadioButton.setSelected(false);
+                if (kunoichiRadioButton.isSelected()) kunoichiRadioButton.setSelected(false);
+                if (samuraiRadioButton.isSelected()) samuraiRadioButton.setSelected(false);
+                nameTextField.setText("");
+                heroStatsTextField.setText("");
             }
         }
     }
 
     private void clearRadioButtons(String buttonName) {
         if (buttonName.equalsIgnoreCase("Samurai!")){
-            if (archerRadioButton.isSelected()) archerRadioButton.doClick();
-            if (kunoichiRadioButton.isSelected()) kunoichiRadioButton.doClick();
+            if (archerRadioButton.isSelected()) archerRadioButton.setSelected(false);
+            if (kunoichiRadioButton.isSelected()) kunoichiRadioButton.setSelected(false);
         } else if(buttonName.equalsIgnoreCase("Kunoichi!")) {
-            if (archerRadioButton.isSelected()) archerRadioButton.doClick();
-            if (samuraiRadioButton.isSelected()) samuraiRadioButton.doClick();
+            if (archerRadioButton.isSelected()) archerRadioButton.setSelected(false);
+            if (samuraiRadioButton.isSelected()) samuraiRadioButton.setSelected(false);
         } else if(buttonName.equalsIgnoreCase("Archer!")) {
-            if (kunoichiRadioButton.isSelected()) kunoichiRadioButton.doClick();
-            if (samuraiRadioButton.isSelected()) samuraiRadioButton.doClick();
+            if (kunoichiRadioButton.isSelected()) kunoichiRadioButton.setSelected(false);
+            if (samuraiRadioButton.isSelected()) samuraiRadioButton.setSelected(false);
         }
+        heroesComboBox.setSelectedIndex(0);
     }
 }

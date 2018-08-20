@@ -51,6 +51,5 @@ public class HeroForm extends JFrame {
         return heroStatsTextField;
     }
 
-    public JComboBox getHeroesComboBox() { return heroesComboBox;
-    }
+    public JComboBox getHeroesComboBox() { return heroesComboBox; }
 }
