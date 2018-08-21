@@ -74,7 +74,7 @@ public class DatabaseController {
         if (!findDuplicateHero(hero.HeroName)) {
             String sql = "INSERT INTO Heros (hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp)" +
                     " VALUES (?, ?, ?, ?, ?, ?, ?);";
-            System.out.println(hero.HeroName + ", " + hero.HeroClass + ", " + hero.HeroHp + ", " + hero.HeroAtt + ", " + hero.HeroDef + ", " + hero.HeroLvl + ", " + hero.HeroXp);
+            //System.out.println(hero.HeroName + ", " + hero.HeroClass + ", " + hero.HeroHp + ", " + hero.HeroAtt + ", " + hero.HeroDef + ", " + hero.HeroLvl + ", " + hero.HeroXp);
             try {
                 Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -97,22 +97,14 @@ public class DatabaseController {
     public static List<Hero> selectAll(){
         String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
         List<Hero> heroes = new ArrayList<Hero>();
-        Hero hero = new Hero();
         try {
             Connection conn = connect();
             Statement stmt  = conn.createStatement();
             ResultSet rs    = stmt.executeQuery(sql);
             // loop through the result set
+            int count = 0;
             while (rs.next()) {
-                /*System.out.println(rs.getInt("hero_id") +  "\n" +
-                        rs.getString("hero_name") + "\n" +
-                        rs.getString("hero_class") + "\n" +
-                        rs.getInt("hero_att") + "\n" +
-                        rs.getInt("hero_def") + "\n" +
-                        rs.getInt("hero_hp") + "\n" +
-                        rs.getInt("hero_lvl") + "\n" +
-                        rs.getInt("hero_xp"));
-                        */
+                Hero hero = new Hero();
                 hero.HeroName = rs.getString("hero_name");
                 hero.HeroClass = rs.getString("hero_class");
                 hero.HeroAtt = rs.getInt("hero_att");
@@ -120,7 +112,8 @@ public class DatabaseController {
                 hero.HeroHp = rs.getInt("hero_hp");
                 hero.HeroLvl = rs.getInt("hero_lvl");
                 hero.HeroXp = rs.getInt("hero_xp");
-                heroes.add(hero);
+                heroes.add(count, hero);
+                count++;
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -129,15 +122,17 @@ public class DatabaseController {
     }
 
     public static Hero selectHero(String HeroName){
-        String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
         Hero hero = new Hero();
+        System.out.println(HeroName);
+        //String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
+        String sql = "SELECT * FROM Heros";
         try {
             Connection conn = connect();
             Statement stmt  = conn.createStatement();
             ResultSet rs    = stmt.executeQuery(sql);
             // loop through the result set
             while (rs.next()) {
-                if (hero.HeroName == HeroName) {
+                if (HeroName.equalsIgnoreCase(rs.getString("hero_name"))) {
                     hero.HeroName = rs.getString("hero_name");
                     hero.HeroClass = rs.getString("hero_class");
                     hero.HeroAtt = rs.getInt("hero_att");
@@ -145,6 +140,7 @@ public class DatabaseController {
                     hero.HeroHp = rs.getInt("hero_hp");
                     hero.HeroLvl = rs.getInt("hero_lvl");
                     hero.HeroXp = rs.getInt("hero_xp");
+                    //System.out.println("found!");
                 }
             }
         } catch (SQLException e) {
@@ -155,14 +151,13 @@ public class DatabaseController {
 
     public static boolean findDuplicateHero(String HeroName){
         String sql = "SELECT hero_id, hero_name, hero_class, hero_att, hero_def, hero_hp, hero_lvl, hero_xp FROM Heros";
-        Hero hero = new Hero();
         try {
             Connection conn = connect();
             Statement stmt  = conn.createStatement();
             ResultSet rs    = stmt.executeQuery(sql);
             // loop through the result set
             while (rs.next()) {
-                if (hero.HeroName == HeroName)
+                if (rs.getString("hero_name").equalsIgnoreCase(HeroName))
                     return (true);
             }
         } catch (SQLException e) {

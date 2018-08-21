@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 public class GameGuiController {
 
+    //public static Hero hero = new Hero();
     private GameForm gameForm;
     private JButton buttonNorth;
     private JButton buttonSouth;
@@ -18,19 +19,6 @@ public class GameGuiController {
     private JTextArea gameTextArea;
     private JLabel labelHero;
     private JLabel labelEnemy;
-
-    public GameGuiController(int width, int height, Hero hero){
-        labelHero.setText("Hero:\n"
-                            + hero.HeroName + "\n"
-                            + hero.HeroClass + "\n"
-                            + hero.HeroLvl + "\n"
-                            + hero.HeroHp + "\n"
-                            + hero.HeroAtt + "\n"
-                            + hero.HeroDef + "\n"
-                            + hero.HeroXp + "\n" );
-        initComponents(width, height);
-        initListeners();
-    }
 
     public void showGameWindow(){
         gameForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -56,6 +44,20 @@ public class GameGuiController {
         buttonWest.addActionListener(new getButtonWestClick());
         buttonEast.addActionListener(new getButtonEastClick());
         backButton.addActionListener(new getBackButtonClick());
+    }
+
+
+    public GameGuiController(int width, int height, Hero hero){
+        initComponents(width, height);
+        initListeners();
+        labelHero.setText("<html>" + hero.HeroName + "<br/>"
+                + hero.HeroClass + "<br/>"
+                + hero.HeroLvl + "<br/>"
+                + hero.HeroHp + "<br/>"
+                + hero.HeroAtt + "<br/>"
+                + hero.HeroDef + "<br/>"
+                + hero.HeroXp + "<html>" );
+
     }
 
     private class getButtonNorthClick implements ActionListener

@@ -7,5 +7,18 @@
     <groupId>kmuvezwa</groupId>
     <artifactId>Swingy</artifactId>
     <version>1.0-SNAPSHOT</version>
-    
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.23.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.0.Final</version>
+        </dependency>
+    </dependencies>
 </project>

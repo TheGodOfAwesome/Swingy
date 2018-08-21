@@ -1,9 +1,8 @@
 
-import Controller.*;
-import Model.Hero;
+import Controller.DatabaseController;
+import Controller.OptionsGuiController;
 import View.ConsoleView;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Swingy {
@@ -14,7 +13,7 @@ public class Swingy {
             DatabaseController.createHeroTable();
             //DatabaseController.insertHero(hero);
             //DatabaseController.deleteHero(hero);
-            List<Hero> heroes = DatabaseController.selectAll();
+            //List<Hero> heroes = DatabaseController.selectAll();
             //DatabaseController.updateHero(hero);
             System.out.println("Game Started!");
             System.out.println(args[0] + "\n");

@@ -10,7 +10,8 @@ import java.util.List;
 
 public class HeroGuiController {
 
-    private Hero hero;
+    public static  Hero hero = new Hero();
+
     private HeroForm heroForm;
     private JRadioButton samuraiRadioButton;
     private JRadioButton kunoichiRadioButton;
@@ -46,8 +47,8 @@ public class HeroGuiController {
         heroesComboBox = heroForm.getHeroesComboBox();
 
         List<Hero> heroes = DatabaseController.selectAll();
-        for (Hero hero : heroes) {
-            heroesComboBox.addItem(hero.HeroName);
+        for(int i = 0; i < heroes.size(); i++) {
+            heroesComboBox.addItem(heroes.get(i).HeroName);
         }
 
     }
@@ -68,18 +69,11 @@ public class HeroGuiController {
                 String heroName = (String) heroesComboBox.getSelectedItem();
                 JOptionPane.showMessageDialog(null, heroName);
                 hero = DatabaseController.selectHero(heroName);
-                JOptionPane.showMessageDialog(null, hero.HeroName);
-                /*if (hero != null) {
-                    GameGuiController gameGuiController = new GameGuiController(1000, 1000, hero);
-                    gameGuiController.showGameWindow();
-                }*/
-                //hero = DatabaseController.selectHero(heroesComboBox.getSelectedItem().toString());
-                //hero = (Hero) heroesComboBox.getSelectedItem();
-            } else if (archerRadioButton.isSelected() || kunoichiRadioButton.isSelected() || samuraiRadioButton.isSelected()) {
-                String name = (heroesComboBox.getSelectedIndex() == 0)
-                        ?  nameTextField.getText() : "name???";
-                JOptionPane.showMessageDialog(null, name);
+                GameGuiController gameGuiController = new GameGuiController(1000, 1000, hero);
+                gameGuiController.showGameWindow();
+            } else if (archerRadioButton.isSelected() || kunoichiRadioButton.isSelected() || samuraiRadioButton.isSelected() && (heroesComboBox.getSelectedIndex() == 0)) {
                 heroForm.dispose();
+                DatabaseController.insertHero(hero);
                 GameGuiController gameGuiController = new GameGuiController(1000, 1000, hero);
                 gameGuiController.showGameWindow();
             } else {
@@ -97,7 +91,7 @@ public class HeroGuiController {
     }
 
     private class getSamuraiRadioButtonSelect implements ActionListener {
-        String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
+        String name = nameTextField.getText();
         public void actionPerformed(ActionEvent e) {
             heroStatsTextField.setText("");
             if (nameTextField.getText().length() == 0) {
@@ -108,8 +102,7 @@ public class HeroGuiController {
             else {
                 String message = "Samurai!";
                 clearRadioButtons(message);
-
-                String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
+                name = nameTextField.getText();
                 hero.HeroName = name;
                 hero.HeroClass = "Samurai";
                 hero.HeroHp = 100;
@@ -118,7 +111,8 @@ public class HeroGuiController {
                 hero.HeroLvl = 0;
                 hero.HeroXp = 0;
                 if (samuraiRadioButton.isSelected()) {
-                    heroStatsTextField.setText(nameTextField.getText() + "\n" +
+                    heroStatsTextField.setText(
+                            nameTextField.getText() + "\n" +
                             "Samurai Stats\n " +
                             "   • 0         Level\n" +
                             "   • 0         Experience\n" +
@@ -133,7 +127,7 @@ public class HeroGuiController {
     }
 
     private class getKunoichiRadioButtonSelect implements ActionListener {
-        String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
+        String name = nameTextField.getText();
         public void actionPerformed(ActionEvent e) {
             heroStatsTextField.setText("");
             if (nameTextField.getText().length() == 0) {
@@ -144,6 +138,7 @@ public class HeroGuiController {
             else {
                 String message = "Kunoichi!";
                 clearRadioButtons(message);
+                name = nameTextField.getText();
                 hero.HeroName = name;
                 hero.HeroClass = "Kunoichi";
                 hero.HeroHp = 100;
@@ -152,7 +147,8 @@ public class HeroGuiController {
                 hero.HeroLvl = 0;
                 hero.HeroXp = 0;
                 if (kunoichiRadioButton.isSelected()) {
-                    heroStatsTextField.setText(nameTextField.getText() + "\n" +
+                    heroStatsTextField.setText(
+                            nameTextField.getText() + "\n" +
                             "Kunoichi Stats\n " +
                             "   • 0         Level\n" +
                             "   • 0         Experience\n" +
@@ -167,7 +163,7 @@ public class HeroGuiController {
     }
 
     private class getArcherRadioButtonSelect implements ActionListener {
-        String name = (nameTextField.getText().length() == 0) ? "Enter Name" : (nameTextField.getText());
+        String name = nameTextField.getText();
         public void actionPerformed(ActionEvent e) {
             heroStatsTextField.setText("");
             if (nameTextField.getText().length() == 0) {
@@ -178,6 +174,7 @@ public class HeroGuiController {
             else {
                 String message = "Archer!";
                 clearRadioButtons(message);
+                name = nameTextField.getText();
                 hero.HeroName = name;
                 hero.HeroClass = "Archer";
                 hero.HeroHp = 100;
@@ -186,7 +183,8 @@ public class HeroGuiController {
                 hero.HeroLvl = 0;
                 hero.HeroXp = 0;
                 if (archerRadioButton.isSelected()) {
-                    heroStatsTextField.setText(nameTextField.getText() + "\n" +
+                    heroStatsTextField.setText(
+                            nameTextField.getText() + "\n" +
                             "Archer Stats\n " +
                             "   • 0         Level\n" +
                             "   • 0         Experience\n" +
