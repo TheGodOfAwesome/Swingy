@@ -8,6 +8,8 @@ public class Enemy {
     public int      EnemyHp;
     public int      EnemyLvl;
     public int      EnemyXp;
+    public int      EnemyX;
+    public int      EnemyY;
 
     public String getEnemyName() {
         return EnemyName;
@@ -62,6 +64,7 @@ public class Enemy {
         EnemyLvl = Level;
         return EnemyLvl;
     }
+
     public int getEnemyXp() {
         return EnemyXp;
     }
@@ -69,5 +72,23 @@ public class Enemy {
     public int setEnemyXp(int Experience) {
         EnemyXp = Experience;
         return EnemyXp;
+    }
+
+    public int getEnemyX() {
+        return EnemyX;
+    }
+
+    public int setEnemyX(int newXCoordinate) {
+        EnemyX = newXCoordinate;
+        return EnemyX;
+    }
+
+    public int getEnemyY() {
+        return EnemyY;
+    }
+
+    public int setEnemyY(int newYCoordinate) {
+        EnemyY = newYCoordinate;
+        return EnemyY;
     }
 }

@@ -108,13 +108,13 @@ public class HeroGuiController {
                 hero.HeroHp = 100;
                 hero.HeroAtt = 10;
                 hero.HeroDef = 20;
-                hero.HeroLvl = 0;
+                hero.HeroLvl = 1;
                 hero.HeroXp = 0;
                 if (samuraiRadioButton.isSelected()) {
                     heroStatsTextField.setText(
                             nameTextField.getText() + "\n" +
                             "Samurai Stats\n " +
-                            "   • 0         Level\n" +
+                            "   • 1         Level\n" +
                             "   • 0         Experience\n" +
                             "   • 10        Attack\n" +
                             "   • 20        Defense\n" +
@@ -150,7 +150,7 @@ public class HeroGuiController {
                     heroStatsTextField.setText(
                             nameTextField.getText() + "\n" +
                             "Kunoichi Stats\n " +
-                            "   • 0         Level\n" +
+                            "   • 1         Level\n" +
                             "   • 0         Experience\n" +
                             "   • 10        Attack\n" +
                             "   • 20        Defense\n" +
@@ -186,7 +186,7 @@ public class HeroGuiController {
                     heroStatsTextField.setText(
                             nameTextField.getText() + "\n" +
                             "Archer Stats\n " +
-                            "   • 0         Level\n" +
+                            "   • 1         Level\n" +
                             "   • 0         Experience\n" +
                             "   • 10        Attack\n" +
                             "   • 20        Defense\n" +

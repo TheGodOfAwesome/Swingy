@@ -12,6 +12,7 @@ public class GameForm extends JFrame{
     private JButton buttonEast;
     private JTextArea textArea1;
     private JButton backButton;
+    private JButton saveButton;
     private JLabel labelHero;
     private JLabel labelEnemy;
 
@@ -29,6 +30,10 @@ public class GameForm extends JFrame{
 
     public JButton getBackButton(){
         return backButton;
+    }
+
+    public JButton getSaveButton(){
+        return saveButton;
     }
 
     public JButton getButtonNorth(){

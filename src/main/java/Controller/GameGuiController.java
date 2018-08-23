@@ -9,16 +9,19 @@ import java.awt.event.ActionListener;
 
 public class GameGuiController {
 
-    //public static Hero hero = new Hero();
+    public Hero player = new Hero();
     private GameForm gameForm;
     private JButton buttonNorth;
     private JButton buttonSouth;
     private JButton buttonWest;
     private JButton buttonEast;
     private JButton backButton;
+    private JButton saveButton;
     private JTextArea gameTextArea;
     private JLabel labelHero;
     private JLabel labelEnemy;
+
+    GameActionController gameController = new GameActionController();
 
     public void showGameWindow(){
         gameForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,6 +36,7 @@ public class GameGuiController {
         buttonWest = gameForm.getButtonWest();
         buttonEast = gameForm.getButtonEast();
         backButton = gameForm.getBackButton();
+        saveButton = gameForm.getSaveButton();
         gameTextArea = gameForm.getGameTextArea();
         labelHero = gameForm.getLabelHero();
         labelEnemy = gameForm.getLabelEnemy();
@@ -44,20 +48,23 @@ public class GameGuiController {
         buttonWest.addActionListener(new getButtonWestClick());
         buttonEast.addActionListener(new getButtonEastClick());
         backButton.addActionListener(new getBackButtonClick());
+        saveButton.addActionListener(new getSaveButtonClick());
     }
 
 
     public GameGuiController(int width, int height, Hero hero){
+        player = hero;
         initComponents(width, height);
         initListeners();
-        labelHero.setText("<html>" + hero.HeroName + "<br/>"
-                + hero.HeroClass + "<br/>"
-                + hero.HeroLvl + "<br/>"
-                + hero.HeroHp + "<br/>"
-                + hero.HeroAtt + "<br/>"
-                + hero.HeroDef + "<br/>"
-                + hero.HeroXp + "<html>" );
+        labelHero.setText("<html>" + player.HeroName + "<br/>"
+                + player.HeroClass + "<br/>"
+                + player.HeroLvl + "<br/>"
+                + player.HeroHp + "<br/>"
+                + player.HeroAtt + "<br/>"
+                + player.HeroDef + "<br/>"
+                + player.HeroXp + "<html>" );
 
+        gameController.startGame(player);
     }
 
     private class getButtonNorthClick implements ActionListener
@@ -105,6 +112,14 @@ public class GameGuiController {
     }
 
     private class getBackButtonClick implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            gameForm.dispose();
+            OptionsGuiController optionsGuiController = new OptionsGuiController();
+            optionsGuiController.showOptionsWindow();
+        }
+    }
+
+    private class getSaveButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             gameForm.dispose();
             OptionsGuiController optionsGuiController = new OptionsGuiController();
