@@ -12,9 +12,9 @@ public class GameActionController {
     Map map;
     Random rand = new Random();
 
-    public String startGame(Hero hero) {
+    public Map startGame(Hero hero) {
         map = new Map(hero);
-        return ("You enter a new Lair!!!");
+        return map;
     }
 
     public void fight(Hero player, Enemy monster, String viewType) {
@@ -53,25 +53,22 @@ public class GameActionController {
 
     }
 
-    public void onMove(String direction, Hero hero) {
-        /*int x = game.getHeroCoord().getX();
-        int y = game.getHeroCoord().getY();
-        previousPosition.setX(x);
-        previousPosition.setY(y);
-
-        switch (direction.toLowerCase()) {
-            case "n":
-                y--;
-                break;
-            case "e":
-                x++;
-                break;
-            case "w":
-                x--;
-                break;
-            case "s":
-                y++;
-                break;
-        }*/
+    public void onMove(String direction, Map map, Hero hero) {
+        int x = map.getPlayerX();
+        int y = map.getPlayerY();
+        map.setPreviousPlayerX(x);
+        map.setPreviousPlayerY(y);
+        System.out.println("Player X: " + map.getPlayerX() + " Player Y: " + map.getPlayerY());
+        if (direction.equalsIgnoreCase("North!")){
+            map.setPlayerX(map.getPlayerX() - 1);
+        } else if (direction.equalsIgnoreCase("South!")){
+            map.setPlayerX(map.getPlayerX() + 1);
+        } else if (direction.equalsIgnoreCase("East!")){
+            map.setPlayerY(map.getPlayerY() + 1);
+        } else if (direction.equalsIgnoreCase("West!")){
+            map.setPlayerY(map.getPlayerY() - 1);
+        }
+        System.out.println("Player X: " + map.getPlayerX() + " Player Y: " + map.getPlayerY());
+        map.loadMap(hero);
     }
 }

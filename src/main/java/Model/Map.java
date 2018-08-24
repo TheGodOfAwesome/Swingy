@@ -10,6 +10,8 @@ public class Map {
     public int          centreY;
     public int          playerX;
     public int          playerY;
+    public int          previousPlayerX;
+    public int          previousPlayerY;
     public List<Enemy>  enemies;
     public String[][]   mapLayout;
 
@@ -72,6 +74,24 @@ public class Map {
     public int setPlayerY(int newPlayerY) {
         playerY = newPlayerY;
         return playerY;
+    }
+
+    public int getPreviousPlayerX() {
+        return previousPlayerX;
+    }
+
+    public int setPreviousPlayerX(int newPreviousPlayerX) {
+        previousPlayerX = newPreviousPlayerX;
+        return previousPlayerX;
+    }
+
+    public int getPreviousPlayerY() {
+        return previousPlayerY;
+    }
+
+    public int setPreviousPlayerY(int newPreviousPlayerY) {
+        previousPlayerY = newPreviousPlayerY;
+        return previousPlayerY;
     }
 
     public List<Enemy> getEnemies() {
@@ -190,7 +210,7 @@ public class Map {
 
         for(int x = 0; x < getMapX(); x++) {
             for(int y = 0; y < getMapY(); y++){
-                mapLayout[x][y] = "?";
+                mapLayout[x][y] = "_";
             }
         }
         List<Enemy> enemies = new ArrayList<Enemy>();
@@ -202,14 +222,18 @@ public class Map {
 
         //System.out.println(Arrays.deepToString(mapLayout));
 
-        for(int x = 0; x < getMapX(); x++) {
-            for(int y = 0; y < getMapY(); y++){
-                System.out.print(mapLayout[x][y]);
-            }
-            System.out.println();
-        }
-
+        setMapLayout(mapLayout);
         return mapLayout;
+    }
+
+    public Enemy checkForEnemies() {
+        List<Enemy> enemies = getEnemies();
+        for (Enemy newEnemy : enemies) {
+            if (newEnemy.getEnemyX() == getPlayerX() && newEnemy.getEnemyY() == getPlayerY()){
+                return newEnemy;
+            }
+        }
+        return null;
     }
 
 }
