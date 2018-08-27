@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Enemy;
 import Model.Hero;
 import Model.Map;
 import View.GameForm;
@@ -24,7 +25,7 @@ public class GameGuiController {
     private JLabel labelHero;
     private JLabel labelEnemy;
 
-    GameActionController gameController = new GameActionController();
+    GameGuiActionController gameController = new GameGuiActionController();
 
     public void showGameWindow(){
         gameForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -59,15 +60,10 @@ public class GameGuiController {
         player = hero;
         initComponents(width, height);
         initListeners();
-        labelHero.setText("<html>" + player.HeroName + "<br/>"
-                + player.HeroClass + "<br/>"
-                + player.HeroLvl + "<br/>"
-                + player.HeroHp + "<br/>"
-                + player.HeroAtt + "<br/>"
-                + player.HeroDef + "<br/>"
-                + player.HeroXp + "<html>" );
+        printHeroStatus(hero);
 
         map = gameController.startGame(player);
+        map.setGameState("gui");
         printMap(map);
     }
 
@@ -77,11 +73,7 @@ public class GameGuiController {
             String message = "North!";
             gameTextArea.setText("");
             gameController.onMove(message, map, player);
-            //printMap(map);
-            //JOptionPane.showMessageDialog(null, message);
-            //gameTextArea.append(message + "\n");
-            //labelHero.setText("North \nNorth \nNorth \nNorth");
-            //labelEnemy.setText("North \nNorth \nNorth \nNorth");
+            printMap(map);
         }
     }
 
@@ -91,11 +83,7 @@ public class GameGuiController {
             String message = "South!";
             gameTextArea.setText("");
             gameController.onMove(message, map, player);
-            //printMap(map);
-            //JOptionPane.showMessageDialog(null, message);
-            //gameTextArea.append(message + "\n");
-            //labelHero.setText("South \nSouth \nSouth \nSouth");
-            //labelEnemy.setText("South \nSouth \nSouth \nSouth");
+            printMap(map);
         }
     }
 
@@ -105,11 +93,7 @@ public class GameGuiController {
             String message = "West!";
             gameTextArea.setText("");
             gameController.onMove(message, map, player);
-            //printMap(map);
-            //JOptionPane.showMessageDialog(null, message);
-            //gameTextArea.append(message + "\n");
-            ///labelHero.setText("<html>West<br/>West<br/>West<br/>West<html>");
-            //labelEnemy.setText("<html>West<br/>West<br/>West<br/>West<html>");
+            printMap(map);
         }
     }
 
@@ -119,11 +103,7 @@ public class GameGuiController {
             String message = "East!";
             gameTextArea.setText("");
             gameController.onMove(message, map, player);
-            //printMap(map);
-            //JOptionPane.showMessageDialog(null, message);
-            //gameTextArea.append(message + "\n");
-            //labelHero.setText("East \nEast \nEast \nEast");
-            //labelEnemy.setText("East \nEast \nEast \nEast");
+            printMap(map);
         }
     }
 
@@ -137,15 +117,25 @@ public class GameGuiController {
 
     private class getSaveButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            DatabaseController.updateHero(player);
             gameForm.dispose();
             OptionsGuiController optionsGuiController = new OptionsGuiController();
             optionsGuiController.showOptionsWindow();
         }
     }
 
-
+    private void printHeroStatus(Hero player) {
+        labelHero.setText("<html>" + player.HeroName + "<br/>"
+                + player.HeroClass + "<br/>"
+                + player.HeroLvl + "<br/>"
+                + player.HeroHp + "<br/>"
+                + player.HeroAtt + "<br/>"
+                + player.HeroDef + "<br/>"
+                + player.HeroXp + "<html>" );
+    }
 
     private void printMap(Map map) {
+        printHeroStatus(player);
         map.loadMap(player);
         String[][] mapLayout = map.getMapLayout();
         /*
@@ -185,4 +175,24 @@ public class GameGuiController {
             b = - (startY);
         }
     }
+
+    public void printCurrentEnemy(Enemy monster) {
+        labelEnemy.setText("<html>" + monster.getEnemyName() + "<br/>"
+                + monster.getEnemyClass() + "<br/>"
+                + monster.getEnemyLvl() + "<br/>"
+                + monster.getEnemyHp() + "<br/>"
+                + monster.getEnemyAtt() + "<br/>"
+                + monster.getEnemyDef() + "<br/>"
+                + monster.getEnemyXp() + "<html>" );
+    }
+
+    public void clearLabelEnemy() {
+        labelEnemy.setText("");
+    }
+
+
+    public void closeForm(){
+            gameForm.dispose();
+    }
+
 }

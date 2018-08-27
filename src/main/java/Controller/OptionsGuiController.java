@@ -42,10 +42,8 @@ public class OptionsGuiController {
     private class getPlayButtonClick implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
-            int screenWidth = 1080;
-            int screenHeight = 1080;
-            GameGuiController gameGuiController = new GameGuiController(screenWidth, screenHeight, hero);
-            gameGuiController.showGameWindow();
+            HeroGuiController heroGuiController = new HeroGuiController();
+            heroGuiController.showHeroWindow();
             optionsForm.setVisible(false);
         }
     }

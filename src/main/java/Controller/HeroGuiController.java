@@ -107,7 +107,7 @@ public class HeroGuiController {
                 hero.HeroClass = "Samurai";
                 hero.HeroHp = 100;
                 hero.HeroAtt = 10;
-                hero.HeroDef = 20;
+                hero.HeroDef = 5;
                 hero.HeroLvl = 1;
                 hero.HeroXp = 0;
                 if (samuraiRadioButton.isSelected()) {
@@ -117,7 +117,7 @@ public class HeroGuiController {
                             "   • 1         Level\n" +
                             "   • 0         Experience\n" +
                             "   • 10        Attack\n" +
-                            "   • 20        Defense\n" +
+                            "   • 5        Defense\n" +
                             "   • 100       Hit Points");
                     heroStatsTextField.revalidate();
                     JOptionPane.showMessageDialog(null, message);
@@ -143,7 +143,7 @@ public class HeroGuiController {
                 hero.HeroClass = "Kunoichi";
                 hero.HeroHp = 100;
                 hero.HeroAtt = 10;
-                hero.HeroDef = 20;
+                hero.HeroDef = 2;
                 hero.HeroLvl = 0;
                 hero.HeroXp = 0;
                 if (kunoichiRadioButton.isSelected()) {
@@ -153,7 +153,7 @@ public class HeroGuiController {
                             "   • 1         Level\n" +
                             "   • 0         Experience\n" +
                             "   • 10        Attack\n" +
-                            "   • 20        Defense\n" +
+                            "   • 2        Defense\n" +
                             "   • 100       Hit Points");
                     heroStatsTextField.revalidate();
                     JOptionPane.showMessageDialog(null, message);
@@ -179,7 +179,7 @@ public class HeroGuiController {
                 hero.HeroClass = "Archer";
                 hero.HeroHp = 100;
                 hero.HeroAtt = 10;
-                hero.HeroDef = 20;
+                hero.HeroDef = 8;
                 hero.HeroLvl = 0;
                 hero.HeroXp = 0;
                 if (archerRadioButton.isSelected()) {
@@ -189,7 +189,7 @@ public class HeroGuiController {
                             "   • 1         Level\n" +
                             "   • 0         Experience\n" +
                             "   • 10        Attack\n" +
-                            "   • 20        Defense\n" +
+                            "   • 8        Defense\n" +
                             "   • 100       Hit Points");
                     heroStatsTextField.revalidate();
                     JOptionPane.showMessageDialog(null, message);

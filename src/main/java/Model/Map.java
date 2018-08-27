@@ -13,6 +13,7 @@ public class Map {
     public int          previousPlayerX;
     public int          previousPlayerY;
     public List<Enemy>  enemies;
+    public String       gameState;
     public String[][]   mapLayout;
 
 
@@ -20,6 +21,16 @@ public class Map {
         generateMap(hero);
         setEnemies(generateEnemies(hero));
         setMapLayout(loadMap(hero));
+    }
+
+
+    public String getGameState() {
+        return gameState;
+    }
+
+    public String setGameState(String newGameState) {
+        gameState = newGameState;
+        return gameState;
     }
 
     public int getMapX() {
@@ -127,6 +138,7 @@ public class Map {
         setPlayerX(getCentreX());
         setPlayerY(getCentreY());
 
+        /*
         System.out.print("Map Generated: \n"
                 + "Map X: " + getMapX() + "\n"
                 + "Map Y: " + getMapY() + "\n"
@@ -134,6 +146,7 @@ public class Map {
                 + "Centre Y: " + getCentreY() + "\n"
                 + "Player X: " + getPlayerX() + "\n"
                 + "Player Y: " + getPlayerY() + "\n");
+        */
 
         return (mapSize);
     }
@@ -188,6 +201,7 @@ public class Map {
             count++;
         }
 
+        /*
         for (Enemy newEnemy : generatedEnemies) {
             System.out.print("Enemy: " + newEnemy.getEnemyName() + "\n"
                                         + newEnemy.getEnemyClass() + "\n"
@@ -198,8 +212,14 @@ public class Map {
                                         + newEnemy.getEnemyX() + "\n"
                                         + newEnemy.getEnemyY() + "\n");
         }
+        */
 
         return generatedEnemies;
+    }
+
+    public void removeEnemy(Enemy enemy) {
+        List<Enemy> enemies = getEnemies();
+        enemies.remove(enemy);
     }
 
     public String[][] loadMap(Hero player) {
@@ -218,7 +238,31 @@ public class Map {
         for (Enemy newEnemy : enemies) {
             mapLayout[newEnemy.getEnemyX()][newEnemy.getEnemyY()] = newEnemy.getEnemyClass().substring(0,1);
         }
-        mapLayout[getCentreX()][getCentreY()] = player.getHeroName().substring(0, 1);
+        mapLayout[getPlayerX()][getPlayerY()] = player.getHeroName().substring(0, 1);
+
+        //System.out.println(Arrays.deepToString(mapLayout));
+
+        setMapLayout(mapLayout);
+        return mapLayout;
+    }
+
+    public String[][] reloadMap(Hero player) {
+        int rows = getMapX();
+        int cols = getMapY();
+
+        mapLayout = new String[rows][cols];
+
+        for(int x = 0; x < getMapX(); x++) {
+            for(int y = 0; y < getMapY(); y++){
+                mapLayout[x][y] = "_";
+            }
+        }
+        List<Enemy> enemies = new ArrayList<Enemy>();
+        enemies = getEnemies();
+        for (Enemy newEnemy : enemies) {
+            mapLayout[newEnemy.getEnemyX()][newEnemy.getEnemyY()] = newEnemy.getEnemyClass().substring(0,1);
+        }
+        mapLayout[getPlayerX()][getPlayerY()] = player.getHeroName().substring(0, 1);
 
         //System.out.println(Arrays.deepToString(mapLayout));
 
