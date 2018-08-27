@@ -60,6 +60,8 @@ public class OptionsGuiController {
     private class getSwitchButtonClick implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
+
+            JOptionPane.showMessageDialog(null, "You can switch once you have selected a hero and playing!" );
         }
     }
 }

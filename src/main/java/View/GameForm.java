@@ -15,6 +15,7 @@ public class GameForm extends JFrame{
     private JButton saveButton;
     private JLabel labelHero;
     private JLabel labelEnemy;
+    private JButton switchButton;
 
     public GameForm(int width, int height){
         panel.setPreferredSize(new Dimension(width, height));
@@ -34,6 +35,10 @@ public class GameForm extends JFrame{
 
     public JButton getSaveButton(){
         return saveButton;
+    }
+
+    public JButton getSwitchButton(){
+        return switchButton;
     }
 
     public JButton getButtonNorth(){

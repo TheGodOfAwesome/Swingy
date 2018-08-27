@@ -25,7 +25,7 @@ public class Swingy {
                 String help  =  "Menu\n " +
                         "'Play'/'P' to play or continue from where you left off.\n " +
                         "'Hero'/'H' to create a hero or load a previous one.\n " +
-                        "'Switch'/'S' to switch to the Graphic Game Interface\n " +
+                        //"'Switch'/'S' to switch to the Graphic Game Interface\n " +
                         "'Exit'/'X' to quit game\n";
                 System.out.println(help);
                 boolean run = true;
@@ -36,9 +36,9 @@ public class Swingy {
                     if(input.equalsIgnoreCase("exit") || input.equalsIgnoreCase("x"))
                         break;
                     else if(input.equalsIgnoreCase("play") || input.equalsIgnoreCase("p"))
-                        consoleView.CaptureGameInputs();
+                        consoleView.CaptureHeroOptions();
                     else if(input.equalsIgnoreCase("hero") || input.equalsIgnoreCase("h"))
-                        consoleView.CaptureCreateHeroInputs();
+                        consoleView.CaptureHeroOptions();
                     else if(input.equalsIgnoreCase("switch") || input.equalsIgnoreCase("s"))
                         System.out.println("Feature Coming Soon!!!.\n");
                     else

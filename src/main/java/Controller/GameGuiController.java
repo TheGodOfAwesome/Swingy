@@ -1,14 +1,15 @@
 package Controller;
 
-import Model.Enemy;
 import Model.Hero;
 import Model.Map;
+import View.ConsoleView;
 import View.GameForm;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Console;
 
 public class GameGuiController {
 
@@ -21,6 +22,7 @@ public class GameGuiController {
     private JButton buttonEast;
     private JButton backButton;
     private JButton saveButton;
+    private JButton switchButton;
     private JTextArea gameTextArea;
     private JLabel labelHero;
     private JLabel labelEnemy;
@@ -41,6 +43,7 @@ public class GameGuiController {
         buttonEast = gameForm.getButtonEast();
         backButton = gameForm.getBackButton();
         saveButton = gameForm.getSaveButton();
+        switchButton = gameForm.getSwitchButton();
         gameTextArea = gameForm.getGameTextArea();
         labelHero = gameForm.getLabelHero();
         labelEnemy = gameForm.getLabelEnemy();
@@ -53,6 +56,7 @@ public class GameGuiController {
         buttonEast.addActionListener(new getButtonEastClick());
         backButton.addActionListener(new getBackButtonClick());
         saveButton.addActionListener(new getSaveButtonClick());
+        switchButton.addActionListener(new getSwitchButtonClick());
     }
 
 
@@ -72,7 +76,7 @@ public class GameGuiController {
         public void actionPerformed(ActionEvent e) {
             String message = "North!";
             gameTextArea.setText("");
-            gameController.onMove(message, map, player);
+            gameController.onMove(message, map, player, gameForm);
             printMap(map);
         }
     }
@@ -82,7 +86,7 @@ public class GameGuiController {
         public void actionPerformed(ActionEvent e) {
             String message = "South!";
             gameTextArea.setText("");
-            gameController.onMove(message, map, player);
+            gameController.onMove(message, map, player, gameForm);
             printMap(map);
         }
     }
@@ -92,7 +96,7 @@ public class GameGuiController {
         public void actionPerformed(ActionEvent e) {
             String message = "West!";
             gameTextArea.setText("");
-            gameController.onMove(message, map, player);
+            gameController.onMove(message, map, player, gameForm);
             printMap(map);
         }
     }
@@ -102,13 +106,14 @@ public class GameGuiController {
         public void actionPerformed(ActionEvent e) {
             String message = "East!";
             gameTextArea.setText("");
-            gameController.onMove(message, map, player);
+            gameController.onMove(message, map, player, gameForm);
             printMap(map);
         }
     }
 
     private class getBackButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            DatabaseController.updateHero(player);
             gameForm.dispose();
             OptionsGuiController optionsGuiController = new OptionsGuiController();
             optionsGuiController.showOptionsWindow();
@@ -121,6 +126,14 @@ public class GameGuiController {
             gameForm.dispose();
             OptionsGuiController optionsGuiController = new OptionsGuiController();
             optionsGuiController.showOptionsWindow();
+        }
+    }
+
+    private class getSwitchButtonClick implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            gameForm.dispose();
+            ConsoleView consoleView = new ConsoleView();
+            consoleView.newMap(player);
         }
     }
 
@@ -153,13 +166,12 @@ public class GameGuiController {
         int a = - (startX);
         int b = - (startY);
 
-        System.out.println(startX);
-        System.out.println(startY);
+        //System.out.println(startX);
+        //System.out.println(startY);
 
         for(int x = 0; x < 50; x++) {
             a++;
             for(int y = 0; y < 125; y++){
-                //System.out.println("x: " + x + "\ny: "+ y + "\na: " + a + "\nb: " + b);
                 b++;
                 if (a >= 0 && a < map.getMapX() && b > 0 && b < map.getMapY()) {
                     gameTextArea.setForeground(Color.WHITE);
@@ -174,25 +186,6 @@ public class GameGuiController {
                 gameTextArea.append("\n");
             b = - (startY);
         }
-    }
-
-    public void printCurrentEnemy(Enemy monster) {
-        labelEnemy.setText("<html>" + monster.getEnemyName() + "<br/>"
-                + monster.getEnemyClass() + "<br/>"
-                + monster.getEnemyLvl() + "<br/>"
-                + monster.getEnemyHp() + "<br/>"
-                + monster.getEnemyAtt() + "<br/>"
-                + monster.getEnemyDef() + "<br/>"
-                + monster.getEnemyXp() + "<html>" );
-    }
-
-    public void clearLabelEnemy() {
-        labelEnemy.setText("");
-    }
-
-
-    public void closeForm(){
-            gameForm.dispose();
     }
 
 }

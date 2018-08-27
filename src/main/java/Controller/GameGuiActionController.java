@@ -19,10 +19,15 @@ public class GameGuiActionController {
         return map;
     }
 
-    public void fight(Hero player, Enemy monster, String viewType) {
+    public void fight(Hero player, Enemy monster, String viewType, GameForm gameForm) {
         JOptionPane.showMessageDialog(null, "Fight fight fight!!!" );
-        GameGuiController guiController = new GameGuiController(1000, 1000, player);
-        guiController.printCurrentEnemy(monster);
+        gameForm.getLabelEnemy().setText("<html>" + monster.getEnemyName() + "<br/>"
+                + monster.getEnemyClass() + "<br/>"
+                + monster.getEnemyLvl() + "<br/>"
+                + monster.getEnemyHp() + "<br/>"
+                + monster.getEnemyAtt() + "<br/>"
+                + monster.getEnemyDef() + "<br/>"
+                + monster.getEnemyXp() + "<html>" );
         int turn = 0;
         while (player.getHeroHp() > 0 && monster.getEnemyHp() > 0) {
             if (turn == 0) {
@@ -35,9 +40,9 @@ public class GameGuiActionController {
                 if(monster.getEnemyHp() == 0) {
                     JOptionPane.showMessageDialog(null,monster.getEnemyName() + " died!" );
                     map.removeEnemy(monster);
-                    guiController.clearLabelEnemy();
+                    gameForm.getLabelEnemy().setText("");
                     addArtefact(player);
-                    levelUp(player);
+                    levelUp(player, gameForm);
                 }
                 turn = 1;
             } else if(turn == 1) {
@@ -48,18 +53,18 @@ public class GameGuiActionController {
                 if(viewType.equalsIgnoreCase("gui"))
                     JOptionPane.showMessageDialog(null, player.getHeroName() + " takes " + damage + " damage!" );
                 if(player.getHeroHp() == 0) {
-                    gameOver(player);
+                    gameOver(player, gameForm);
                 }
                 turn = 0;
             }
         }
     }
 
-    public void run(Map map, Hero hero, Enemy enemy) {
+    public void run(Map map, Hero hero, Enemy enemy, GameForm gameForm) {
         JOptionPane.showMessageDialog(null, "Your 'hero' is trying to run!!!" );
         boolean run =  rand.nextBoolean();
         if (run == true){
-            fight(hero, enemy, map.getGameState());
+            fight(hero, enemy, map.getGameState(), gameForm);
         } else {
             JOptionPane.showMessageDialog(null, "Your 'hero' is running!!!" );
             map.setPlayerX(map.getPreviousPlayerX());
@@ -67,16 +72,21 @@ public class GameGuiActionController {
         }
     }
 
-    public void levelUp(Hero player) {
+    public void levelUp(Hero player, GameForm gameForm) {
         int currentlevel = player.getHeroLvl();
         int level = currentlevel + 1;
         int xp = player.getHeroXp();
         int xpToNxtLevel = (level * 1000) + (level - (1 * 2450));
         if (xp == xpToNxtLevel) {
+            JOptionPane.showMessageDialog(null, player.HeroName + " leveling up!");
             player.setHeroLvl(level);
             player.setHeroHp(player.getHeroLvl()  + (10 * level));
             player.setHeroDef(5 * level);
             player.setHeroAtt(5 * level);
+            startGame(player);
+            gameForm.dispose();
+            GameGuiController gameGuiController = new GameGuiController(1000, 1000, player);
+            gameGuiController.showGameWindow();
         }
     }
 
@@ -95,7 +105,7 @@ public class GameGuiActionController {
         }
     }
 
-    public void onMove(String direction, Map map, Hero hero) {
+    public void onMove(String direction, Map map, Hero hero, GameForm gameForm) {
         int x = map.getPlayerX();
         int y = map.getPlayerY();
         map.setPreviousPlayerX(x);
@@ -103,7 +113,7 @@ public class GameGuiActionController {
 
         if (direction.equalsIgnoreCase("North!")){
             if (x == 0) {
-                newLevel(hero);
+                newLevel(hero, gameForm);
                 //return;
             } else {
                 map.setPlayerX(map.getPlayerX() - 1);
@@ -114,15 +124,15 @@ public class GameGuiActionController {
                             "Click a button",
                             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
                     if (opt == 0)
-                        fight(hero, enemy, "gui");
+                        fight(hero, enemy, "gui", gameForm);
                     else if (opt == 1)
-                        run(map, hero, enemy);
+                        run(map, hero, enemy, gameForm);
                 }
                 map.loadMap(hero);
             }
         } else if (direction.equalsIgnoreCase("South!")){
             if (x == map.getMapX() - 1){
-                newLevel(hero);
+                newLevel(hero, gameForm);
                 //return;
             } else {
                 map.setPlayerX(map.getPlayerX() + 1);
@@ -133,15 +143,15 @@ public class GameGuiActionController {
                             "Click a button",
                             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
                     if (opt == 0)
-                        fight(hero, enemy, "gui");
+                        fight(hero, enemy, "gui", gameForm);
                     else if (opt == 1)
-                        run(map, hero, enemy);
+                        run(map, hero, enemy, gameForm);
                 }
                 map.loadMap(hero);
             }
         } else if (direction.equalsIgnoreCase("East!")){
             if (y == map.getMapY() - 1){
-                newLevel(hero);
+                newLevel(hero, gameForm);
                 //return;
             } else {
                 map.setPlayerY(map.getPlayerY() + 1);
@@ -152,15 +162,15 @@ public class GameGuiActionController {
                             "Click a button",
                             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
                     if (opt == 0)
-                        fight(hero, enemy, "gui");
+                        fight(hero, enemy, "gui", gameForm);
                     else if (opt == 1)
-                        run(map, hero, enemy);
+                        run(map, hero, enemy, gameForm);
                 }
                 map.loadMap(hero);
             }
         } else if (direction.equalsIgnoreCase("West!")){
             if (y == 1){
-                newLevel(hero);
+                newLevel(hero, gameForm);
                 //return;
             } else {
                 map.setPlayerY(map.getPlayerY() - 1);
@@ -171,30 +181,28 @@ public class GameGuiActionController {
                             "Click a button",
                             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
                     if (opt == 0)
-                        fight(hero, enemy, "gui");
+                        fight(hero, enemy, "gui", gameForm);
                     else if (opt == 1)
-                        run(map, hero, enemy);
+                        run(map, hero, enemy, gameForm);
                 }
                 map.loadMap(hero);
             }
         }
     }
 
-    private void newLevel(Hero hero) {
+    private void newLevel(Hero hero, GameForm gameForm) {
         hero.setHeroLvl(hero.getHeroLvl() + 1);
         startGame(hero);
-        //GameForm gameForm = new GameForm(1000, 1000);
-        //gameForm.dispose();
+        gameForm.dispose();
         GameGuiController gameGuiController = new GameGuiController(1000, 1000, hero);
         gameGuiController.showGameWindow();
     }
 
-    private void gameOver(Hero player) {
+    private void gameOver(Hero player, GameForm gameForm) {
         JOptionPane.showMessageDialog(null,player.getHeroName() + " died!");
         DatabaseController.deleteHero(player);
-        GameForm gameForm = new GameForm(1000, 1000);
-        gameForm.setVisible(false);
         OptionsGuiController optionsGuiController = new OptionsGuiController();
         optionsGuiController.showOptionsWindow();
+        gameForm.dispose();
     }
 }

@@ -138,16 +138,6 @@ public class Map {
         setPlayerX(getCentreX());
         setPlayerY(getCentreY());
 
-        /*
-        System.out.print("Map Generated: \n"
-                + "Map X: " + getMapX() + "\n"
-                + "Map Y: " + getMapY() + "\n"
-                + "Centre X: " + getCentreX() + "\n"
-                + "Centre Y: " + getCentreY() + "\n"
-                + "Player X: " + getPlayerX() + "\n"
-                + "Player Y: " + getPlayerY() + "\n");
-        */
-
         return (mapSize);
     }
 
@@ -201,19 +191,6 @@ public class Map {
             count++;
         }
 
-        /*
-        for (Enemy newEnemy : generatedEnemies) {
-            System.out.print("Enemy: " + newEnemy.getEnemyName() + "\n"
-                                        + newEnemy.getEnemyClass() + "\n"
-                                        + newEnemy.getEnemyAtt() + "\n"
-                                        + newEnemy.getEnemyDef() + "\n"
-                                        + newEnemy.getEnemyHp() + "\n"
-                                        + newEnemy.getEnemyXp() + "\n"
-                                        + newEnemy.getEnemyX() + "\n"
-                                        + newEnemy.getEnemyY() + "\n");
-        }
-        */
-
         return generatedEnemies;
     }
 
@@ -264,10 +241,21 @@ public class Map {
         }
         mapLayout[getPlayerX()][getPlayerY()] = player.getHeroName().substring(0, 1);
 
-        //System.out.println(Arrays.deepToString(mapLayout));
+        //printMap();
 
         setMapLayout(mapLayout);
         return mapLayout;
+    }
+
+    public void printMap() {
+        System.out.println("");
+        for(int x = 0; x < getMapX(); x++) {
+            for(int y = 0; y < getMapY(); y++){
+                System.out.print(mapLayout[x][y]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
     }
 
     public Enemy checkForEnemies() {

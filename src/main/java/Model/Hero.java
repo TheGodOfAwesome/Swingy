@@ -86,4 +86,8 @@ public class Hero {
         HeroLvl = Level;
         return HeroLvl;
     }
+
+    public void printHero(Hero hero) {
+        hero.getHeroName();
+    }
 }
