@@ -2,20 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c904d1cc-3122-4965-bde3-9753df28f7de" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite-jdbc-3.23.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Swingy.db" beforeDir="false" afterPath="$PROJECT_DIR$/Swingy.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GameGuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GameGuiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Swingy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Swingy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/GameForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GameForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/GameForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GameForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Swingy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Swingy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/View/GameForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Swingy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/View/GameForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -118,45 +126,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameGuiController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameGuiController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2400">
-              <caret line="169" column="10" selection-start-line="169" selection-start-column="10" selection-end-line="169" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-719">
-              <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-              <folding>
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3420">
-              <caret line="250" column="28" selection-start-line="250" selection-start-column="28" selection-end-line="250" selection-end-column="28" />
+            <state relative-caret-position="-916">
+              <caret line="158" column="34" selection-start-line="158" selection-start-column="34" selection-end-line="158" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameConsoleActionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1597">
+              <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameConsoleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -164,8 +156,8 @@
       <file leaf-file-name="OptionsGuiController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+            <state relative-caret-position="182">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,8 +168,8 @@
       <file leaf-file-name="Swingy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Swingy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+            <state relative-caret-position="203">
+              <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,41 +177,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OptionsForm.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/OptionsForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OptionsForm.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/OptionsForm.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1552">
-              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+            <state relative-caret-position="2360">
+              <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4221#4229#0" expanded="true" />
+                <element signature="e#9362#9370#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameForm.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="GameGuiActionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="21" column="87" lean-forward="true" selection-start-line="21" selection-start-column="87" selection-end-line="22" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeroGuiController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/HeroGuiController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="66" column="57" lean-forward="true" selection-start-line="66" selection-start-column="57" selection-end-line="72" selection-end-column="51" />
+            <state relative-caret-position="1530">
+              <caret line="102" column="62" selection-start-line="102" selection-start-column="62" selection-end-line="102" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -264,13 +262,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Controller/GuiGameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/OptionsForm.form" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/HeroGuiForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/OptionsForm.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/queries.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/DbConnController.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/queries.txt" />
         <option value="$PROJECT_DIR$/src/main/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/View/HeroForm.form" />
         <option value="$PROJECT_DIR$/src/main/java/View/HeroForm.java" />
         <option value="$PROJECT_DIR$/src/pom.xml" />
@@ -279,16 +275,19 @@
         <option value="$PROJECT_DIR$/src/main/java/Model/GameState.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/GameActionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/HeroGuiController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/Map.java" />
         <option value="$PROJECT_DIR$/src/main/java/Swingy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/Hero.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/GameForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/GameForm.form" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/GameGuiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Hero.java" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_23_1.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Map.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/View/OptionsForm.java" />
       </list>
     </option>
   </component>
@@ -328,7 +327,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="24" />
     <option name="width" value="1919" />
     <option name="height" value="977" />
   </component>
@@ -338,8 +337,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,11 +344,48 @@
               <item name="Swingy" type="b2602c69:ProjectViewProjectNode" />
               <item name="Swingy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Swingy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swingy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swingy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swingy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swingy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swingy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="OptionsForm" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,145 +395,27 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535329839610" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sqlite-jdbc-3.23.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/Controller" />
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/db" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Controller" />
       <recent name="Model" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/db" />
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea/libraries" />
+      <recent name="$PROJECT_DIR$/src/main/java/Controller" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Swingy.db</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Controller/GameGuiController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Controller/HeroGuiController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Model/Map.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Model/GameState.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Controller/GameActionController.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -513,11 +429,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Swingy">
     <configuration name="Swingy" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Swingy" />
       <module name="Swingy" />
-      <option name="PROGRAM_PARAMETERS" value="console" />
+      <option name="PROGRAM_PARAMETERS" value="gui" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -564,6 +480,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -589,6 +530,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Swingy" />
+      <item itemvalue="Maven.Unnamed" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Swingy" />
@@ -618,6 +563,7 @@
       <workItem from="1534856343991" duration="5304000" />
       <workItem from="1535104381940" duration="821000" />
       <workItem from="1535108910832" duration="9055000" />
+      <workItem from="1535434520138" duration="10602000" />
     </task>
     <task id="LOCAL-00001" summary="Working gui and cli">
       <created>1533565790252</created>
@@ -647,11 +593,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535041048391</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Completed">
+      <created>1535380653203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535380653203</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106435000" />
+    <option name="totallyTimeSpent" value="117769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,7 +616,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1919" height="977" extended-state="1" />
+    <frame x="0" y="24" width="1919" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
@@ -673,14 +626,14 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.501355" side_tool="true" weight="0.3266564" />
-      <window_info anchor="right" id="Maven Projects" order="7" sideWeight="0.49507388" weight="0.3299458" />
+      <window_info anchor="right" id="Maven Projects" order="7" sideWeight="0.49507388" weight="0.3295302" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993225" visible="true" weight="0.32447398" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32923076" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49864498" weight="0.32615384" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993225" visible="true" weight="0.3318182" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49864498" weight="0.325" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14538822" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16196057" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info anchor="right" id="Database" order="6" weight="0.15893695" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
@@ -688,39 +641,17 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986577" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Learn" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14563759" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5049261" side_tool="true" weight="0.3306233" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.501355" side_tool="true" weight="0.3266564" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49864498" weight="0.32615384" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="7" sideWeight="0.49507388" weight="0.3295302" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32885906" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986577" />
-      <window_info anchor="bottom" id="TODO" order="4" weight="0.32923076" />
-      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32885906" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39772728" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32890365" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993225" visible="true" weight="0.32348993" />
-      <window_info anchor="right" id="Database" order="6" weight="0.15893695" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="3" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5049261" side_tool="true" weight="0.3306233" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32885906" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -734,23 +665,10 @@
     <MESSAGE value="Minor Readme.md and Swingy edits" />
     <MESSAGE value="Major Updates on GUI and Console Interfaces" />
     <MESSAGE value="Completed Map class and associated functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed Map class and associated functions." />
+    <MESSAGE value="Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Hero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-89">
@@ -785,12 +703,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="-310">
           <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="das://18496d9b-253b-4d5b-a9a0-ed3683704253/schema/main/table/heros">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -833,16 +751,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameActionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameActionController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
@@ -866,38 +775,11 @@
     <entry file="file://$PROJECT_DIR$/src/out/production/Swingy/main/java/Swingy.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/OptionsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="750">
-            <caret line="50" column="78" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameController$1.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/OptionsForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="das://c9fd1a97-49dd-463a-b781-6800a6e64e10/schema/main/table/heros" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DbConnController.java" />
     <entry file="jar://E:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/URLClassLoader.java" />
     <entry file="jar://E:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ClassLoader.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/queries.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/View/HeroForm.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -913,17 +795,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/View/HeroForm.form">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="ui-designer" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/Random.java" />
     <entry file="das://18496d9b-253b-4d5b-a9a0-ed3683704253/schema/main/table/heros">
@@ -940,71 +815,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="190" column="63" selection-start-line="190" selection-start-column="63" selection-end-line="190" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Hero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
-          <folding>
-            <element signature="e#1638#1639#0" expanded="true" />
-            <element signature="e#1657#1658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-719">
-          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="250" column="28" selection-start-line="250" selection-start-column="28" selection-end-line="250" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding>
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/HeroGuiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="66" column="57" lean-forward="true" selection-start-line="66" selection-start-column="57" selection-end-line="72" selection-end-column="51" />
+        <state relative-caret-position="900">
+          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="72" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1012,32 +827,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.form">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Swingy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="21" column="87" lean-forward="true" selection-start-line="21" selection-start-column="87" selection-end-line="22" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider editor-type-id="ui-designer" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameGuiController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1046,24 +837,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+        <state relative-caret-position="510">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="750">
+            <caret line="50" column="78" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_23_1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1552">
-          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+        <state relative-caret-position="30">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameGuiActionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="62" selection-start-line="102" selection-start-column="62" selection-end-line="102" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4221#4229#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-916">
+          <caret line="158" column="34" selection-start-line="158" selection-start-column="34" selection-end-line="158" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/GameConsoleActionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1597">
+          <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2360">
+          <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9362#9370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/OptionsGuiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Swingy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/OptionsForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/OptionsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

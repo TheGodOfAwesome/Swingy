@@ -1,7 +1,9 @@
 package Model;
 
 
-import com.sun.istack.internal.NotNull;
+//import com.sun.istack.internal.NotNull;
+
+import javax.validation.constraints.NotNull;
 
 public class Hero {
 

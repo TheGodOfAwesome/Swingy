@@ -94,13 +94,13 @@ public class GameGuiActionController {
         int level = player.getHeroLvl();
         int artefactIndex = rand.nextInt(7) + 1;
         if (artefactIndex == 1){
-            player.setHeroAtt(5 * level);
+            player.setHeroAtt(player.getHeroAtt() + (5 * level));
             JOptionPane.showMessageDialog(null, "You are the sword master!!!" );
         } else if (artefactIndex == 2){
-            player.setHeroDef(5 * level);
+            player.setHeroDef(player.getHeroAtt() + (5 * level));
             JOptionPane.showMessageDialog(null, "Behold the shield of truth!!!" );
         } else if (artefactIndex == 3){
-            player.setHeroHp(5 * level);
+            player.setHeroHp(player.getHeroAtt() + (5 * level));
             JOptionPane.showMessageDialog(null, "You have obtained the ring of vitality!!" );
         }
     }

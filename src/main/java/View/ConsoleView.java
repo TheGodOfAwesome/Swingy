@@ -190,7 +190,7 @@ public class ConsoleView {
                     hero.HeroHp = 100;
                     hero.HeroAtt = 10;
                     hero.HeroDef = 2;
-                    hero.HeroLvl = 0;
+                    hero.HeroLvl = 1;
                     hero.HeroXp = 0;
                     System.out.println(message + " selected!");
                     DatabaseController.insertHero(hero);
@@ -207,7 +207,7 @@ public class ConsoleView {
                     hero.HeroHp = 100;
                     hero.HeroAtt = 10;
                     hero.HeroDef = 8;
-                    hero.HeroLvl = 0;
+                    hero.HeroLvl = 1;
                     hero.HeroXp = 0;
                     System.out.println(message + " selected!");
                     DatabaseController.insertHero(hero);

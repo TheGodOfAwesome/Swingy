@@ -5,7 +5,6 @@ import Model.Hero;
 import Model.Map;
 import View.ConsoleView;
 
-import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -22,10 +21,7 @@ public class GameConsoleActionController {
                 if (damage <= 0)
                     damage = 1;
                 monster.setEnemyHp(monster.getEnemyHp() - damage);
-                if (viewType.equalsIgnoreCase("console"))
-                    System.out.println(monster.getEnemyName() + " takes " + damage + " damage" );
-                else if(viewType.equalsIgnoreCase("gui"))
-                    JOptionPane.showMessageDialog(null, monster.getEnemyName() + " takes " + damage + " damage!");
+                System.out.println(monster.getEnemyName() + " takes " + damage + " damage" );
                 if(monster.getEnemyHp() == 0) {
                     System.out.println(monster.getEnemyName() + " died!" );
                     map.removeEnemy(monster);
@@ -38,10 +34,7 @@ public class GameConsoleActionController {
                 if (damage <= 0)
                     damage = 1;
                 player.setHeroHp(player.getHeroHp() - damage);
-                if (viewType.equalsIgnoreCase("console"))
-                    System.out.println(player.getHeroName() + " takes " + damage + " damage!" );
-                else if(viewType.equalsIgnoreCase("gui"))
-                    JOptionPane.showMessageDialog(null, player.getHeroName() + " takes " + damage + " damage!" );
+                System.out.println(player.getHeroName() + " takes " + damage + " damage!" );
                 if(player.getHeroHp() == 0) {
                     System.out.println(player.getHeroName() + " died!");
                     DatabaseController.deleteHero(player);
@@ -129,8 +122,8 @@ public class GameConsoleActionController {
                         }
                     }
                 }
-                map.printMap();
                 map.reloadMap(hero);
+                map.printMap();
                 //ConsoleView consoleView = new ConsoleView();
                 //consoleView.CaptureGameInputs(hero, map);
             }
@@ -155,8 +148,8 @@ public class GameConsoleActionController {
                         }
                     }
                 }
-                map.printMap();
                 map.reloadMap(hero);
+                map.printMap();
                 //ConsoleView consoleView = new ConsoleView();
                 //consoleView.CaptureGameInputs(hero, map);
             }
@@ -181,8 +174,8 @@ public class GameConsoleActionController {
                         }
                     }
                 }
-                map.printMap();
                 map.reloadMap(hero);
+                map.printMap();
                 //ConsoleView consoleView = new ConsoleView();
                 //consoleView.CaptureGameInputs(hero, map);
             }
@@ -207,8 +200,8 @@ public class GameConsoleActionController {
                         }
                     }
                 }
-                map.printMap();
                 map.reloadMap(hero);
+                map.printMap();
                 //ConsoleView consoleView = new ConsoleView();
                 //consoleView.CaptureGameInputs(hero, map);
             }
