@@ -32,7 +32,8 @@ e.g. http://www.java2s.com/Code/JavaAPI/java.io/BufferedInputStream.htm
 ### [Intellij's Swing Gui Documetation](https://www.jetbrains.com/help/idea/creating-form-initialization-code.html)
 e.g. https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
 
-
+### [Making a swing project using IntelliJ IDEA GUI builder with maven, Including executable jar](http://glxn.net/2010/08/17/making-a-swing-project-using-intellij-idea-and-gui-builder-with-maven-including-executable-jar)
+e.g. http://glxn.net/2010/08/17/making-a-swing-project-using-intellij-idea-and-gui-builder-with-maven-including-executable-jar
 
 ### Links  
 *   https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html  
@@ -48,7 +49,8 @@ e.g. https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
 *   https://www.youtube.com/watch?v=ohL2HIBK1pg Observer Design Pattern  
 *   https://www.youtube.com/watch?v=ub0DXaeV6hA&t=4s Factory Design Pattern  
 *   https://www.youtube.com/watch?v=xbjAsdAK4xQ Abstract Factory Design Pattern  
-*   https://www.jetbrains.com/help/idea/creating-form-initialization-code.html  
+*   https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
+*   http://glxn.net/2010/08/17/making-a-swing-project-using-intellij-idea-and-gui-builder-with-maven-including-executable-jar  
 
 
 ## Mandatory part  
